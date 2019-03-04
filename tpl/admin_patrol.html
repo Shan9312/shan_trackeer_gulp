@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/jquery.lineProgressbar.min.css">
+</head>
+<body>
+<div class="ifm  admin">
+    <div class="title" style="height: 100px" >
+        <button class="back_a" onclick="delHtml('admin_patrol')"></button>
+        <div class="mod" style="height: 100px">
+            <span>巡视任务完成率</span>
+            <div  id="round-ss" style="width: 250px;position: relative;top:-5px; margin:5px;padding-top:3px;"></div>
+            <div class="data con" style="position: relative;top: -34px;z-index: 10;">
+                <i>平均</i>
+            </div>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol"></div>
+    <div class="data_select" style="top:106px!important;">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="ss-table" style="border-bottom: 2px solid #dfdfdf;">
+       <h1> 2018年 未完成任务</h1>
+        <div class="ss-content">
+            <div class="ss-left" style="float:left;">
+                <div class="panel s-month ss-panel">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseu">
+                            <span class="caret ss-caret_span"></span>
+                            月任务 （完成率 <i class="month_i">90%</i>）
+                        </a>
+                    </div>
+                    <div id="collapseu" class="panel-collapse collapse in">
+                    <ul class="list-group panel-body " data-id="d1">
+
+                    </ul>
+                    </div>
+                </div>
+                <div class="panel s-week ss-panel">
+
+                    <div class="panel-heading">
+                        <!--<h4 class="panel-title">-->
+                            <span class="s-caret"></span>
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTs">
+                                <span class="caret ss-caret_span"></span>
+                                周任务 （完成率 <i class="week_i">90%</i>）
+                            </a>
+                        <!--</h4>-->
+                    </div>
+                    <div id="collapseTs" class="panel-collapse collapse in">
+                        <ul class="list-group panel-body" data-id="d2">
+                            <!--<li class="list-group-item">10月</li>-->
+                            <!--<li class="list-group-item">9月</li>-->
+                            <!--<li class="list-group-item">8月</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel s-day ss-panel">
+
+                    <div class="panel-heading">
+                        <!--<h4 class="panel-title">-->
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseUs">
+                                <span class="caret ss-caret_span"></span>
+                                日任务 （完成率 <i class="day_i">90%</i>）
+                            </a>
+                        <!--</h4>-->
+                    </div>
+                    <div id="collapseUs" class="panel-collapse collapse in" >
+                        <ul class="list-group panel-body" data-id="d3">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ss-right" style="float:right;">
+                <div class="panel-group" id="accordion" style="margin-bottom: 0">
+                    <!--<div class="panel  ">-->
+                        <!--<div class="panel-heading">-->
+                            <!--&lt;!&ndash;<h4 class="panel-title">&ndash;&gt;-->
+                                <!--<a data-toggle="collapse" data-parent="#accordion"-->
+                                   <!--href="#collapset">-->
+                                    <!--需要任务的 名字-->
+                                    <!--<span class="caret ss_span"></span>-->
+                                <!--</a>-->
+                                <!--<a data-toggle="collapse" data-parent="#accordion"-->
+                                   <!--href="#collapset" style="float: right;position: absolute; right: 40px;">-->
+                                    <!--需要完成<span>4</span> 次 实际<span>0</span>次-->
+                                <!--</a>-->
+                            <!--&lt;!&ndash;</h4>&ndash;&gt;-->
+                        <!--</div>-->
+                        <!--<div id="collapset" class="panel-collapse collapse in ss-collapse">-->
+                            <!--<div class="panel-body" style="background-color: #ebebeb;">-->
+                                <!--<p>-->
+                                    <!--<span style="color:#aaa"> 条线</span>-->
+                                    <!--<span>需要任务相关人</span>-->
+
+                                <!--</p>-->
+                                <!--<div class="con_ss">-->
+                                    <!--<img src="../img/icon_bluetooth@3x.png" alt="">-->
+                                    <!--<p class="line"></p>-->
+                                    <!--<ul class="context" data-id="s1">-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="panel  ">-->
+                        <!--<div class="panel-heading">-->
+                            <!--&lt;!&ndash;<h4 class="panel-title">&ndash;&gt;-->
+                            <!--<a data-toggle="collapse" data-parent="#accordion"-->
+                               <!--href="#collapset">-->
+                                <!--需要任务的 名字-->
+                                <!--<span class="caret ss_span"></span>-->
+                            <!--</a>-->
+                            <!--<a data-toggle="collapse" data-parent="#accordion"-->
+                               <!--href="#collapset" style="float: right;position: absolute; right: 40px;">-->
+                                <!--需要完成<span>4</span> 次 实际<span>0</span>次-->
+                            <!--</a>-->
+                            <!--&lt;!&ndash;</h4>&ndash;&gt;-->
+                        <!--</div>-->
+                        <!--<div id="collapset" class="panel-collapse collapse in ss-collapse">-->
+                            <!--<div class="panel-body" style="background-color: #ebebeb;">-->
+                                <!--<p>-->
+                                    <!--<span style="color:#aaa"> 条线</span>-->
+                                    <!--<span>需要任务相关人</span>-->
+
+                                <!--</p>-->
+                                <!--<div class="con_ss">-->
+                                    <!--<img src="../img/icon_bluetooth@3x.png" alt="">-->
+                                    <!--<p class="line"></p>-->
+                                    <!--<ul class="context" data-id="s1">-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<span class="cirles"></span>-->
+                                            <!--<p class="txt">蓝牙名称</p>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery.lineProgressbar.js"></script>
+<script>
+    int();
+    patrol_rate.int();
+</script>
+</html>
+

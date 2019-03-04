@@ -1,0 +1,72 @@
+<div class="ifm AssetsBox" ng-controller="device">
+    <div class="header">
+        <span class="title"><i class="on">设备</i><i class="">物料</i></span>
+        <div class="search dev">
+        <select class="select-one">
+                <option value="1">设备号</option>
+                <option value="2">设备名</option>
+                <option value="3">蓝牙名</option>
+            </select><input type="text"/><i></i>
+        </div>
+        <div class="search mat"><select class="mat_select">
+            <option value="1">名称</option>
+        </select><input type="text"/><i></i>
+        </div>
+        <button class="addFun mat" onclick="Materiel.add()">添加物料</button>
+        <button class="OrderBox mat">人员权限设置</button>
+    </div>
+    <table class="table text-center device dev">
+        <thead>
+            <tr>
+                <th>设备号
+                    <!--<div class="dropdown peopleList">
+                        <button class="dropdown-toggle" type="button" id="device-num" data-toggle="dropdown" data-status="">设备号<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="device-num">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" data-page="2">从大到小</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" data-page="1">从小到大</a></li>
+                        </ul>
+                    </div>-->
+                </th>
+                <th>设备名称</th>
+                <th>房间号</th>
+                <th>
+                    <div class="dropdown line">
+                        <button class="dropdown-toggle" type="button" id="device_line" data-toggle="dropdown">条线<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="device_line" ></ul>
+                    </div>
+                </th>
+                <th>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="device_statu" data-toggle="dropdown" data-status="">状态<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="device_statu" >
+                            <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="">全部</a></li>
+                            <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="1">正常</a></li>
+                            <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="2">故障</a></li>
+                        </ul>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--<tr>
+                <td onclick="openHtml('tpl/device_detail.html','device')">ADW6325</td>
+                <td>卡机是好</td>
+                <td>7JP1A1-SHB-001</td>
+                <td>强电</td>
+                <td>正常</td>
+            </tr>-->
+        </tbody>
+    </table>
+    <table class="table text-center materiel mat">
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>条线</th>
+            <th>剩余数量</th>
+            <th>警戒线</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>

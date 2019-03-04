@@ -1,0 +1,173 @@
+.table>thead>tr>th{
+    border-bottom: 1px solid #ddd;
+}
+.peoplePatrol tr>td {
+    text-align: center;
+}
+/*------人员详情------*/
+.peopleDetails header {
+    padding-left: 24px;
+    position: relative;
+}
+.peopleDetails .update-user-info{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+.peopleDetails header .back{
+    margin-top: 40px;
+}
+.peopleDetails header .con{
+    float: right;
+    width: 852px;
+    position: relative;
+}
+.peopleDetails .con .face{
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+.peopleDetails .con .operation{
+    float: right;
+    width: 419px;
+    height:118px;
+    background: #ff9711;
+    position: absolute;
+    right:0;
+    top:0;
+}
+.normal span,.fault span{
+    font-weight: bold;
+    color: #50555C;
+    cursor: pointer;
+    position: relative;
+
+}
+.fault span{
+    left: 6px;
+}
+.normal span{
+  left:11px;
+}
+.normal .watch {
+    display: inline-block;
+    width:28px;
+    height: 19px;
+}
+
+.normal .normol_img,.fault .normol_img{
+    display: inline-block;
+    width:18px;
+    height: 16px;
+    position: relative;
+    left: -6px;
+}
+.normalBox {
+    padding:10px;
+}
+.normalBox .title {
+    display: block;
+    border-bottom:1px solid #e4e4e4;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 0px;
+    color:#333!important;
+}
+.normalBox .item_box{
+    margin: 12px auto;
+    overflow: hidden;
+    /*padding:5px 0;*/
+}
+.normalBox .item_box .rg_txt{
+    text-align: center;
+    width: 72%;
+    display: inline-block;
+}
+.normalBox .item_box>span.lf_title{
+    font-weight: 600;
+    margin-right: 30px;
+}
+.normalBox .item_box .rg_content{
+    width: 72%;
+    float: right;
+
+}
+.normalBox .item_box .img_box{
+    float: right;
+    width: 72%;
+}
+/*.peopleDetails .operation .lins{*/
+    /*display: inline-block;*/
+    /*width:1px;*/
+    /*height:65px;*/
+    /*border:1px solid #fff;*/
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*top: 26px;*/
+/*}*/
+.peopleDetails .operation button{
+    margin-top: 20px;
+    margin-right: 88px;
+    color: #fff;
+    font-size: 16px;
+
+}
+.peopleDetails header .ziliao{
+    float: left;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-top: 7px;
+}
+.peopleDetails .ziliao .boxcon1{
+    width: 230px;
+    border-bottom: 1px solid #e3e3e3;
+    padding:0;
+}
+.peopleDetails .ziliao span{
+    display: block;
+    line-height: 26px;
+    font-weight: bold;
+}
+.peopleDetails .ziliao span i{
+    margin-left: 5px;
+}
+.peopleDetails .ziliao b{
+    display: inline-block;
+    width: 14px;
+    height:14px;
+    vertical-align: middle;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: 100%;
+    margin-right: 5px;
+}
+.boxcon1 span:first-child{
+    font-size: 22px;
+}
+.peopleDetails .ziliao .boxcon2 span{
+    display: block;
+    height: 22px;
+}
+.jilu{
+    width: 600px;
+    text-align: left;
+}
+.jilu span{
+    display: inline-block;
+    width:50%;
+}
+.cahobiao>tbody>tr>td:nth-child(1){
+    padding: 28px;
+}
+.jilu span{
+    padding: 5px;
+}
+.jilu span i{
+    color: #50555C;
+    font-weight: bold;
+}

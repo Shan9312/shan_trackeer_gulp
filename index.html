@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRACKER</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/csss.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/moment.min.js"></script>
+    <script src="js/datepicker.all.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script>
+        if(!Cookies.get("token")){
+            location.href="login.html"
+        }
+    </script>
+</head>
+<body ng-app="myapp" class="bodyBg" id="vue">
+<div class="bodyBox">
+    <!--header_ubpa_03.png-->
+    <div class="bodyLeft" ng-controller="bodyLeft">
+        <img class="logo" ng-src="{{logo}}"/>
+        <nav>
+            <div class="gmBox">
+                <span class="name">--</span>
+            <span class="face">
+                <img src="" onclick="openHtml('tpl/mine.html','mine')">
+            </span>
+                <div class="dropdown gmCon">
+                <button class="gmBtn dropdown-toggle" type="button" id="position" data-toggle="dropdown" ng-repeat="x in roleList | filter:roles"><i>{{x.role+(x.projectName==null?'':'('+x.projectName+')')}}</i><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="position">
+                    <li role="presentation" ng-repeat="x in roleList"><a role="menuitem" tabindex="-1" ng-click="rcf(x.accountId,x.roleId)">{{x.role+(x.projectName==null?'':'('+x.projectName+')')}}</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="navBox" id="navList">
+                <a data-href="#order" class="active">工单</a>
+                <a data-href="#people">人员</a>
+                <a data-href="#device">设备</a>
+                <a data-href="#patrol">巡视</a>
+                <a data-href="#ppm">PPM</a>
+            </div>
+            <i class="navbg"></i>
+        </nav>
+        <div class="wait"><span><i class="icon_wait"><b class="trNum" ng-show="trNum">{{trNum}}</b></i>未读消息</span></div>
+        <div class="info">
+            <div class="info_time" ng-show="!isTracker">
+                <span>{{infoTime.yy}}年{{infoTime.mm}}月{{infoTime.dd}}日</span>
+                <span>星期{{infoTime.w}}</span>
+                <span>{{infoTime.h}}<i class="minu">:</i>{{infoTime.m}}</span>
+            </div>
+            <div class="info_patrol"  ng-show="isTracker">
+                <span class="info_date">{{infoTime.mm}}月{{infoTime.dd}}日 周{{infoTime.w}}<i>巡视进度</i></span>
+                <span class="info_hf">{{infoTime.h}}<i class="minu">:</i>{{infoTime.m}}</span>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{(pNum/tNum)*100+'%'}};"></div>
+                </div>
+                <span class="info_num">{{pNum}}<i>/</i>{{tNum}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="bodyRight">
+        <div ng-view></div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRACHER</title>
+    <script src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<input type="date" id="Date" onchange="Date()">
+<table border="0" cellpadding="20" >
+    <tbody>
+        <tr>
+            <th colspan="6" align="left">Tracker 上线项目每日数据总信息如下：</th>
+        </tr>
+        <tr>
+            <td>项目总数：</td>
+            <td class="pro_total">xxxxxx</td>
+        </tr>
+        <tr>
+            <td>当前工单总数：</td>
+            <td class="total_order_count">xxxxxx</td>
+            <td>当前未完成工单数:</td>
+            <td class="uncomplete_count">xxxxxx</td>
+        </tr>
+        <tr>
+            <td>今天巡视蓝牙总数：</td>
+            <td  class="patrol_beacon">xxxxxx</td>
+            <td>今天生成工单数:</td>
+            <td  class="order_count">xxxxxx</td>
+        </tr>
+    </tbody>
+</table>
+<table border="1" cellpadding="20" cellspacing="0" id="tracker" >
+    <thead>
+        <tr>
+            <th>项目</th>
+            <th>负责人</th>
+            <th>总工单数</th>
+            <th>当前未完成工单数</th>
+            <th>今天巡视蓝牙数</th>
+            <th>今天生成工单数</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<table border="0" cellpadding="20" >
+    <tbody>
+    <tr>
+        <th colspan="6" align="left">PPM每日数据汇总：</th>
+    </tr>
+    <tr>
+        <td>项目总数：</td>
+        <td class="projectCount">xxxxxx</td>
+        <td>本周任务总数：</td>
+        <td class="taskCount">xxxxxx</td>
+    </tr>
+    <tr>
+        <td>本周延期完成任务总数：</td>
+        <td class="taskDelayCount">xxxxxx</td>
+        <td>本周超时未完成任务总数:</td>
+        <td class="taskNoCompleteCount">xxxxxx</td>
+    </tr>
+    </tbody>
+</table>
+<table border="1" cellpadding="20" cellspacing="0" id="ppm" >
+    <thead>
+    <tr>
+        <th>项目</th>
+        <th>负责人</th>
+        <th>本周任务数</th>
+        <th>本周延期完成任务数</th>
+        <th>本周超时未完成任务数</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script>
+    function Date(){
+        $.ajax({
+            type:"POST",
+            dataType:"json",
+            url:"http://www.myhitron.com:6030/email/getEmail",
+            data:{
+                token:Cookies.get("token"),
+                date:$("#Date").val()
+            },
+            success:function(data){
+                if(data.code=="10000"){
+                    $(".pro_total").html(data.trackerInfo.project_count);
+                    $(".total_order_count").html(data.trackerInfo.total_order_count);
+                    $(".uncomplete_count").html(data.trackerInfo.total_uncomplete_count);
+                    $(".patrol_beacon").html(data.trackerInfo.total_patrol_beacon+"/"+data.trackerInfo.total_beacon);
+                    $(".order_count").html(data.trackerInfo.date_order_count);
+                    var str="";
+                    $.each(data.trackerList,function(i,n){
+                        str+='<tr>';
+                        str+='<td>'+n.name+'</td>';
+                        str+='<td>'+n.manager_names+'</td>';
+                        str+='<td>'+n.total_order_count+'</td>';
+                        str+='<td>'+n.uncomplete_count+'</td>';
+                        str+='<td>'+n.patrol_beacon+"/"+n.total_beacon+'</td>';
+                        str+='<td>'+n.date_order_count+'</td>';
+                        str+='</tr>';
+                    });
+                    $("#tracker tbody").html(str);
+                    $(".projectCount").html(data.PPMInfo.projectCount);
+                    $(".taskCount").html(data.PPMInfo.taskCount);
+                    $(".taskDelayCount").html(data.PPMInfo.taskDelayCount);
+                    $(".taskNoCompleteCount").html(data.PPMInfo.taskNoCompleteCount);
+                    var str1="";
+                    $.each(data.PPMList,function(i,n){
+                        str1+='<tr>';
+                        str1+='<td>'+n.name+'</td>';
+                        str1+='<td>'+n.personName+'</td>';
+                        str1+='<td>'+n.taskCount+'</td>';
+                        str1+='<td>'+n.taskDelayCount+'</td>';
+                        str1+='<td>'+n.taskNoCompleteCount+'</td>';
+                        str1+='</tr>';
+                    });
+                    $("#ppm tbody").html(str1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            }
+        });
+    }
+</script>
+</html>

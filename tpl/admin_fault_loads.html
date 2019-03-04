@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/jquery.lineProgressbar.min.css">
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title" style="height: 100px" >
+        <button class="back_a" onclick="delHtml('admin_fault_loads')"></button>
+        <div class="mod" >
+            <span >本周工单按时完成率</span>
+            <div  id="round-ss" style="width: 250px;position: relative;top:-5px; margin:5px;padding-top:3px;"></div>
+            <div class="data con" style="position: relative;top: -34px;z-index: 10;">
+                <i>平均</i>
+            </div>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol" ></div>
+    <div class="data_select">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table" style="margin-top: 40px;">
+        <ul class="loads"></ul>
+    </div>
+</div>
+</body>
+<script src="../js/jquery.lineProgressbar.js"></script>
+<script>
+    int();
+    fault_loads.int();
+</script>
+</html>
+

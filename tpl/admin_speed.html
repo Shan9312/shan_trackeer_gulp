@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title" style="height:110px">
+        <button class="back_a" onclick="delHtml('admin_speed')"></button>
+        <div class="mod">
+            <span>平均工单处理数据</span>
+            <div class="data_tex">
+                <span>上周平均工单耗时 <b id="avg_open">-</b> 小时</span>
+                <span>工单分配速度 <b id="avg_assign">-</b> 小时</span>
+                <span>工单处理速度 <b id="avg_fix">-</b> 小时</span>
+            </div>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol"></div>
+    <div class="data_select">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table" style="margin-top:25px;">
+        <table class="table text-center speedT">
+            <thead>
+                <tr>
+                    <th>时间</th>
+                    <th>项目名</th>
+                    <th>上周平均工单耗时</th>
+                    <th>工单分配速度</th>
+                    <th>工单处理速度</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script>
+    int();
+    speed_order.int();
+</script>
+</html>
+

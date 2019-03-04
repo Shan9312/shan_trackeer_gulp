@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title moon_peo">
+        <button class="back_a" onclick="delHtml('admin_moon_peo')"></button>
+        <div class="mod">
+            <img src="../img/defaultHeadIcon.png" >
+        </div>
+        <div class="mod">
+            <span><b id="peo_name">代用名</b></span>
+            <i id="peo_role">项目部 职位职位</i>
+        </div>
+        <div class="mod list">
+            <i id="peo_num">工号：xxxxxxxxx</i>
+            <i id="peo_call">电话：xxxxxxxxx</i>
+            <i id="peo_email">邮箱：ahjkhdjkfhajhfjahfajhj</i>
+        </div>
+        <div class="mod big">
+            <span><em>本周工单数量</em> <b id="avg_order_engineer">0</b> 张</span>
+            <span>平均处理时间 <b id="avg_order_open">0</b> 小时</span>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol" ></div>
+    <div class="clearfix"></div>
+    <div class="data_select">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>时间</th>
+                    <th>工单号</th>
+                    <th>条线</th>
+                    <th>设备名</th>
+                    <th>完成时间</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <button class="btn_daochu">导出</button>
+</div>
+</body>
+<script>
+    int();
+    moon_peo.int();
+</script>
+</html>
+

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title">
+        <button class="back_a" onclick="delHtml('admin_pro')"></button>
+        <div class="mod_1">
+            <span><b id="pro_name">项目名</b></span>
+        </div>
+        <div class="mod_1">
+            <div class="data con">
+                <i>上周平均工单耗时</i>
+                <i><b id="avg_order_open">0</b> 小时</i>
+            </div>
+        </div>
+        <div class="mod_1">
+            <div class="data con">
+                <i>工单分配速度</i>
+                <i><b id="avg_order_assign">0</b> 小时</i>
+            </div>
+        </div>
+        <div class="mod_1">
+            <span>工单处理速度 <b id="avg_order_fix">0</b>  小时</span>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol"></div>
+    <div class="data_select" style="top:96px!important;">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table" style="margin-top: 30px !important;">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>时间</th>
+                    <th>工单号</th>
+                    <th>故障设备</th>
+                    <th>上周平均工单耗时 <div class="arrows"><i data-num="1"></i><i data-num="2"></i></div></th>
+                    <th>工单分配速度 <div class="arrows"><i data-num="3"></i><i data-num="4"></i></div></th>
+                    <th>工单处理速度 <div class="arrows"><i data-num="5"></i><i data-num="6"></i></div></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script>
+    int();
+    admin_pro.int();
+</script>
+</html>
+

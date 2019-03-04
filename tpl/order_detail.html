@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/order.css"/>
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm orderDetails">
+    <header class="">
+        <div class="box">
+            <img src="../img/one/back.png" class="back" style="float:left;margin-top:17px;margin-right:6px;" onclick="delHtml('order')"/>
+            <div class="box-right">
+                <img src="" class="icon_order" />
+                <span></span>
+            </div>
+            <!--位置-->
+            <div class="box-right-place">
+                <p class="box-p">
+                    <img src="../img/fun/web_14.png" style="vertical-align:bottom;width: 16px;" alt="">
+                    <span class="box-p-one"  style="cursor: default;"></span>
+                </p>
+                <p  class="box-p box-p-two"  style="cursor: default;">
+                </p>
+            </div>
+        </div>
+        <div class="box con">
+            <h3>
+                <i class="con-text"></i>
+                <i></i>
+            </h3>
+            <span> <i>--</i></span>
+            <!--<span>工单号 <i>&#45;&#45;</i></span>-->
+            <!--<span>位置 <i>&#45;&#45;</i>&nbsp;&nbsp;&nbsp;故障设备/环境 <em>&#45;&#45;</em></span>-->
+        </div>
+        <!---->
+        <div class="box">
+            <div class="dropdown order_fun_add">
+                <a class="dropdown-toggle icon_order_add" type="button" id="orderStatus" data-toggle="dropdown">
+                    <p class="img_icon img_icon_add"></p>
+                    <span>新增</span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="orderStatus" style="left:-37px!important;">
+                    <li role="presentation" class="oa_9"><a href="javascript:;" role="menuitem" tabindex="-1" onclick="order_alert.add(9)">添加报告</a></li>
+                    <li role="presentation" class="oa_3"><a href="javascript:;" role="menuitem" tabindex="-1" onclick="order_alert.add(3)">完成工单</a></li>
+                    <li role="presentation" class="oa_7"><a href="javascript:;" role="menuitem" tabindex="-1" onclick="order_alert.add(7)">完成</a></li>
+                    <li role="presentation" class="oa_4"><a href="javascript:;" role="menuitem" tabindex="-1" onclick="order_alert.add(4)">无法完成</a></li>
+                </ul>
+            </div>
+            <!--<a class="icon_order_suc"  onclick="order_alert.add(7)">-->
+                <!--<p class="img_icon img_icon_suc"></p>-->
+                <!--<span>完成</span>-->
+            <!--</a>-->
+            <a onclick="order_alert.work()" class="icon_order_pai order_fun_pa">
+                <p class="img_icon_pai img_icon"></p>
+                <span>派工</span>
+            </a>
+            <a class="peopleDel" onclick="order_alert.del()">
+                <p class="img_icon_del img_icon"></p>
+                <span> 删除</span>
+           </a>
+            <div class="dropdown order_fun_redact">
+             <a class="dropdown-toggle icon_order_redact" type="button" id="" data-toggle="dropdown">
+                 <p class="img_icon_redact img_icon"></p>
+                 <span>属性</span>
+             </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="orderStatus" >
+                    <li role="presentation" class="red_share"><a href="javascript:;" role="menuitem" tabindex="-1" onclick="order_alert.share()">分享工单</a></li>
+                    <li role="presentation" class="red_label"><a href="javascript:;" role="menuitem" tabindex="-1" onclick="order_alert.label()">标签更改</a></li>
+                </ul>
+           </div>
+           <a class="icon_order_fan" onclick="order_alert.fan()">
+               <p class="img_icon_fan img_icon"></p>
+               <span>反馈</span>
+           </a>
+            <a class="icon_order_yan" onclick="order_alert.yan()">
+                <p class="img_icon_fan img_icon"></p>
+                <span>验收</span>
+            </a>
+        </div>
+    </header>
+    <div class="details">
+
+        <ul>
+            <!--<li>
+                <div class="left">
+                    <div>
+                        <img src="../img/one/createorder.png" >
+                    </div>
+                    <div>
+                        <span>创建工单</span>
+                        <i>2016-10-16 20:54:38</i>
+                    </div>
+                </div>
+                <div class="right">
+                    <span>巡视人员：王小虎</span>
+                    <span>故障情况：</span>
+                    <ul>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                    </ul>
+                    <span>备注：</span>
+                    <ul class="note">
+                        <li>电源缺少点评</li>
+                    </ul>
+                    <ul class="note tixiang">
+                        <li>>故障情况重复，已将记录添加到xxxxxx号工单</li>
+                    </ul>
+                </div>
+                <div class="imgBox">
+                    <img src="http://www.ifourthwall.com/static/tracker/2017-03-16/14896490343692048.png" onclick="alertImg.open('http://www.ifourthwall.com/static/tracker/2017-03-16/14896490343692048.png')">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <div>
+                        <img src="../img/one/renyuanbiangeng.png" alt="">
+                    </div>
+                    <div>
+                        <span>人员变更</span>
+                        <i>2016-10-16 20:54:38</i>
+                    </div>
+                </div>
+                <div class="right">
+                    <span><i class="orange">强电</i><i>主管：张晓芬</i><i class="share">权限分享到</i><i class="yellow">排水</i></span>
+                    <span><i class="orange">强电</i><i>主管：张晓芬</i><i class="share">权限分享到</i><i class="blue">排水</i></span>
+                    <span><i class="orange">强电</i><i>主管：张晓芬</i><i class="assign">任务指派到</i><i>排水</i></span>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <div>
+                        <img src="../img/one/jianxiubaogao.png" alt="">
+                    </div>
+                    <div>
+                        <span style="color: #007aff">检修报告</span>
+                        <i>2016-10-16 20:54:38</i>
+                    </div>
+                </div>
+                <div class="right">
+                    <span><i class="orange">强电</i><i>张晓芬</i></span>
+                    <span>检修情况：</span>
+                    <ul>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                    </ul>
+                </div>
+                <div class="imgBox"></div>
+            </li>
+            <li>
+                <div class="left">
+                    <div>
+                        <img src="../img/one/wufawancheng.png" alt="">
+                    </div>
+                    <div>
+                        <span style="color: #ff6666">无法完成</span>
+                        <i>2016-10-16 20:54:38</i>
+                    </div>
+                </div>
+                <div class="right">
+                    <span><i class="orange">强电</i><i>张晓芬</i></span>
+                    <span>检修情况：</span>
+                    <ul>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                    </ul>
+                </div>
+                <div class="imgBox"></div>
+            </li>
+            <li>
+                <div class="left">
+                    <div>
+                        <img src="../img/one/gengxingongdan.png" alt="">
+                    </div>
+                    <div>
+                        <span>更新工单</span>
+                        <i>2016-10-16 20:54:38</i>
+                    </div>
+                </div>
+                <div class="right">
+                    <span>巡视人员：王小虎</span>
+                    <span>故障情况：</span>
+                    <ul>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                    </ul>
+                </div>
+                <div class="imgBox"></div>
+            </li>
+            <li>
+                <div class="left">
+                    <div>
+                        <img src="../img/one/wanchengjianxiu.png" alt="">
+                    </div>
+                    <div>
+                        <span style="color: #00e634">已经完成</span>
+                        <i>2016-10-16 20:54:38</i>
+                    </div>
+                </div>
+                <div class="right">
+                    <span><i class="orange">强电</i><i>张晓芬</i></span>
+                    <span>检修情况：</span>
+                    <ul>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                        <li>电源缺少点评</li>
+                    </ul>
+                </div>
+                <div class="imgBox"></div>
+            </li>-->
+        </ul>
+    </div>
+</div>
+<script>
+    Order.one();
+    $(".details").delegate(".imgBox img","click",function(){
+        alertImg.open($(this).attr("src"))
+    })
+</script>
+</body>
+</html>
+

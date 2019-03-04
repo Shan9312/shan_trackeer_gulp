@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="css/patrol.css"/>
+<div class="ifm" ng-controller="patrol">
+    <div class="patrol_header" >
+        <h1>巡视</h1>
+        <h2>当日已巡视<span>-</span>个任务</h2>
+        <h3><span>-</span>/<i>20</i></h3>
+    </div>
+    <!--<table class="table text-center patrol">
+        <thead>
+            <tr>
+                <th>巡视人</th>
+                <th>
+                    <div class="dropdown line">
+                        <button class="dropdown-toggle" type="button" id="patrolLine" data-toggle="dropdown" data-status="">条线<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="patrolLine" ></ul>
+                    </div>
+                </th>
+                <th>位置</th>
+                <th>提交时间</th>
+                <th>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="patrolStatus" data-toggle="dropdown" data-status="">状态<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="patrolStatus" >
+                            <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="">全部</a></li>
+                            <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="1">正常</a></li>
+                            <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="2">有故障</a></li>
+                        </ul>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>-->
+    <div class="patrolBox">
+        <div class="patrol_date">
+            <div class="patrol_date_time">
+                <ul></ul>
+            </div>
+            <div class="patrol_date_select"><select></select>年<select></select>月
+                <button>只显示未完成</button>
+            </div>
+        </div>
+        <div class="patrol_list">
+            <table  class="table text-center ">
+                <thead>
+                    <tr>
+                        <th>位置</th>
+                        <th>次数</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>

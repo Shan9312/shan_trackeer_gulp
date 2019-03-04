@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script src="../js/moment.min.js"></script>
+    <script src="../js/datepicker.all.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+</head>
+<body>
+<div class="ifm order_box">
+    <header class="header">
+        <img src="../img/back2.png" class="back" onclick="delHtml('order_search')" style="margin-top: -10px"/>
+        <span class="title">搜索结果</span>
+        <div class="search" >
+            <select class="select-one">
+                <option value="0" data-tip="工单号">工单号</option>
+                <option value="1" data-tip="设备名称">设备名</option>
+                <option value="2" data-tip="人员名称">人员名</option>
+                <option value="3" data-tip="位置">位置</option>
+                <option value="4" data-tip="1">工单性质</option>
+            </select>
+            <input type="text" class="sel-input" placeholder="工单号"/>
+            <div class="order-nature " >
+                <select  class="select-two selectpicker" id='select-1'  multiple>
+                    <!--<option value="0" data-tip="全部">全部</option>-->
+                    <!--<option value="1" data-tip="维保商">维保商</option>-->
+                    <!--<option value="2" data-tip="供应商">供应商</option>-->
+                    <!--<option value="3" data-tip="计划养护">计划养护</option>-->
+                    <!--<option value="4" data-tip="自修">自修</option>-->
+                </select>
+            </div>
+            <i class="search_cx"></i>
+        </div>
+        <!--日期-->
+        <div class="mt40">
+            <div class="c-datepicker-date-editor  J-datepicker-range-day mt10">
+                <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+                <input placeholder="开始日期" name="" class="c-datepicker-data-input only-date datepicker-start-2" value="">
+                <span class="c-datepicker-range-separator">-</span>
+                <input placeholder="结束日期" name="" class="c-datepicker-data-input only-date datepicker-end-2" value="">
+            </div>
+        </div>
+    </header>
+    <table class="table text-center order">
+        <thead>
+        <tr>
+            <th>
+                <div class="dropdown status">
+                    <button class="dropdown-toggle" type="button" id="orderStatus" data-toggle="dropdown" data-status="">工单状态<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="orderStatus" >
+
+                    </ul>
+                </div>
+            </th>
+            <th>工单号</th>
+            <th>
+                <div class="dropdown line">
+                    <button class="dropdown-toggle" type="button" id="orderLine" data-toggle="dropdown" data-status="">条线<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="orderLine"></ul>
+                </div>
+            </th>
+            <th>故障设备/环境</th>
+            <th>报修人</th>
+            <th>
+                <div class="dropdown orderBy">
+                    <button class="dropdown-toggle" type="button" id="createTime" data-toggle="dropdown" data-status="">创建时间<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="createTime" >
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="3">最远</a></li>
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="4">最近</a></li>
+                    </ul>
+                </div>
+            </th>
+            <th>检修人</th>
+            <th>
+                <div class="dropdown orderBy">
+                    <button class="dropdown-toggle" type="button" id="updataTime" data-toggle="dropdown" data-status="1">更新时间<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="updataTime" >
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="2">最远</a></li>
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="1">最近</a></li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="page"></div>
+    <div class="total_box">总数：-</div>
+    <button class="btn_excel" onclick="Order.excel()">导出</button>
+</div>
+<script>
+        /**
+        * 获取选中的日期 重新给 搜索页日期负值
+        * **/
+        var obj = localStorage.getItem('dataTime') == 'undefined'? null :JSON.parse(localStorage.getItem('dataTime'));
+        if (obj) {
+            $('.J-datepicker-range-day .datepicker-start-2').val(obj.startTime+'')
+            $('.J-datepicker-range-day .datepicker-end-2').val(obj.endTime+'')
+        }
+        /**
+         * 选中的工单性质，重新复制
+         * **/
+        var values_arr = localStorage.getItem('values_arr') == 'undefined'? null :JSON.parse(localStorage.getItem('values_arr'));
+        if (values_arr != null){
+            $('.order-nature').show();
+            $(".search input").hide();
+        }
+        $(document).ready(function() {
+            Order.int();
+            $('#select-1').selectpicker('val', values_arr);
+
+            $('#select-1').selectpicker('refresh');
+           //  $.each( values_arr,function(i,n){
+           //
+           //  $("#select-1").find("option[value="+ n +"]").attr("selected",true);
+           //
+           // })
+        });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body >
+<div class="ifm userInfo" id="userInfo" >
+    <header class="header">
+        <img src="../img/back2.png" class="back" onclick="delHtml('mine')" style="margin-top: -10px"/>
+        <span class="title">账户信息</span>
+        <button class="changePass" onclick="parent.mine.editPass()">修改密码</button>
+        <button class="changeData" onclick="parent.mine.editData()">修改资料</button>
+    </header>
+    <div class="tableBox">
+        <table class="table">
+            <tr id="info">
+                <td style="padding-bottom: 20px">
+                    <div class="infoBox">
+                        <div class="pc">
+                            <img src="../img/check.png" >
+                        </div>
+                        <div class="info" style="margin-top: 0">
+                            <p class="nam">--</p>
+                            <p class="icon_job">--</p>
+                            <p class="icon_person">工号 <i>--</i></p>
+                            <p class="icon_mail">邮箱 <i>--</i></p>
+                            <p class="icon_phone">手机 <i>--</i></p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </td>
+            </tr>
+            <!--<tr class="managerArea">
+                <td>
+                    <div class="infoBox">
+                        <p class="title">管理项目（区域经理）</p>
+                        <div class="con">
+                            <p>外滩六号</p>
+                            <p>外滩六号</p>
+                            <p>外滩六号</p>
+                            <p>外滩六号</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="managerProject">
+                <td>
+                    <div class="infoBox">
+                        <p class="title">管理项目（项目经理）</p>
+                        <div class="con">
+                            <p>外滩六号</p>
+                            <p>外滩六号</p>
+                            <p>外滩六号</p>
+                            <p>外滩六号</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>-->
+        </table>
+    </div>
+    <button class="logoOut" onclick="login.out()">登出</button>
+</div>
+<script>
+    mine.int();
+</script>
+</body>
+</html>

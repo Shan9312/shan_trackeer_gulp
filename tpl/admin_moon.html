@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title">
+        <button class="back_a" onclick="delHtml('admin_moon')"></button>
+        <div class="mod_1">
+            <span><b id="pro_name">--</b></span>
+        </div>
+        <div class="mod_1">
+            <span>人均工单 <b id="avg_order">0</b> 张</span>
+        </div>
+        <div class="mod_1">
+            <span>总工单数 <b id="total_order">0</b> 张</span>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="moon" style="border-bottom:1px solid #ccc;"></div>
+    <div class="chart" id="moonX"></div>
+    <div class="clearfix"></div>
+    <div class="data_select" style="top:99px!important;right:351px">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table" style="height: 218px;overflow-y: auto">
+            <p> <span>本周</span>超时工单<span>12<span>张 占<span>4%</span></p>
+            <table class="table text-center completion">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>条线</th>
+                        <th>工号</th>
+                        <th>本周工单数</th>
+                        <th>占比</th>
+                        <th>平均处理时间 <div class="arrows"><i data-num="1"></i><i data-num="2"></i></div></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+ </body>
+<script>
+    int();
+    moon.int();
+</script>
+</html>
+

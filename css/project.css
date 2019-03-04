@@ -1,0 +1,81 @@
+.project header{
+    background: #000;
+}
+.project header .title{
+    color: #fff;
+    font-size: 34px;
+    line-height: 62px;
+}
+.project .back{
+    margin-top: -15px;
+}
+.project h4{
+    margin: 29px 0 5px 82px;
+}
+.project h5{
+    font-size: 16px;
+}
+.project .tableBox{
+    width: 514px;
+    margin-left: 67px;
+    padding-top: 10px;
+}
+.project .tableBox .table{
+    margin-bottom: 0;
+}
+.project .table>tbody>tr>td {
+    border-top: 0;
+    border-bottom: 1px dashed #D8D8D8;
+}
+.project .table td:nth-child(1){
+    padding-left: 45px;
+    text-align: left;
+}
+.project .table th:nth-child(1){
+    text-align: left;padding-left: 48px;
+}
+.project .table .describe{
+    width:315px;height:68px;overflow: hidden;
+    word-wrap: break-word;
+}
+.pic{
+    width:430px;height:120px;
+    overflow: hidden;
+}
+.pic img{
+    float: left;
+    width: 120px;
+    height:120px;
+    line-height: 120px;
+    border-radius: 50%;
+    background: #ddd;
+    margin-right: 22px;
+}
+.project .line{
+    background: #d8d8d8;
+    width: 1px;height:400px;
+    position: absolute;
+    top:105px;right:330px;
+}
+.modify{
+    width: 300px;
+    height:200px;
+    position: absolute;
+    right: 0;
+    top:102px;
+}
+.mfy{
+    margin-top: 31px;
+    margin-left: 18px;
+    font-size: 14px;
+    color: #007aff;
+    background: url("../img/pen1.png") no-repeat center left;
+    background-size:15px 15px ;
+    padding-left: 27px;
+    border: 0;
+    display: block;
+}
+.mfyDle{
+    background: url("../img/del.jpg") no-repeat center left;
+    background-size:13px 16px ;
+}

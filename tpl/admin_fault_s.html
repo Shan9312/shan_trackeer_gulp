@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title">
+        <button class="back_a" onclick="delHtml('admin_fault')"></button>
+        <div class="mod">
+            <span>本周故障率</span>
+            <div class="data round" id="round"></div>
+            <div class="data con">
+                <i><b class="conNum">0%</b></i>
+                <i>数据故障率</i>
+            </div>
+            <div class="data con last">
+                <i><b class="conNum">0%</b></i>
+                <i>正常</i>
+            </div>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol"></div>
+    <div class="data_select">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table">
+        <ul></ul>
+    </div>
+</div>
+</body>
+<script>
+    int();
+    fault_device.int();
+
+</script>
+</html>
+

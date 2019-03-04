@@ -1,0 +1,131 @@
+
+<div class="ifm order_box" ng-controller="order">
+    <div class="header">
+        <span class="title"><i class="on">现有工单</i><i>完成工单</i></span>
+        <div class="search">
+            <select class="select-one">
+                <option value="0" data-tip="工单号">工单号</option>
+                <option value="1" data-tip="设备名称">设备名</option>
+                <option value="2" data-tip="人员名称">人员名</option>
+                <option value="3" data-tip="位置">位置</option>
+                <option value="4" data-tip="1">工单性质</option>
+            </select>
+            <input type="text" class="sel-input" placeholder="工单号"/>
+            <div class="order-nature " >
+                <select class="select-two selectpicker" id='select-1'  multiple>
+                    <option value="0" data-tip="全部">全部</option>
+                    <option value="1" data-tip="维保商">维保商</option>
+                    <option value="2" data-tip="供应商">供应商</option>
+                    <option value="3" data-tip="计划养护">计划养护</option>
+                    <option value="4" data-tip="自修">自修</option>
+                </select>
+            </div>
+            <i class="search_tz"></i>
+        </div>
+        <button class="addFun" onclick="Order.add()">添加工单</button>
+        <!--日期-->
+        <div class="mt40">
+            <div class="c-datepicker-date-editor  J-datepicker-range-day mt10">
+                <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+                <input placeholder="开始日期" name="" class="c-datepicker-data-input only-date datepicker-start" value="">
+                <span class="c-datepicker-range-separator">-</span>
+                <input placeholder="结束日期" name="" class="c-datepicker-data-input only-date datepicker-end" value="">
+            </div>
+        </div>
+        <!-- <button class="OrderBox">工单盒子&lt;!&ndash;<i>10</i>&ndash;&gt;</button>-->
+    </div>
+    <table class="table text-center order">
+        <thead>
+        <tr>
+            <th>
+                <div class="dropdown status">
+                    <button class="dropdown-toggle"
+                            type="button"
+                            id="orderStatus"
+                            data-toggle="dropdown"
+                            data-status="">全部状态<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="orderStatus" >
+                    </ul>
+                </div>
+            </th>
+            <th style="width: 80px;">工单号</th>
+            <th>
+                <div class="dropdown line">
+                    <button class="dropdown-toggle" type="button" id="orderLine" data-toggle="dropdown" data-status="">全部条线<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="orderLine"></ul>
+                </div>
+            </th>
+            <th style="width: 180px;">故障设备/环境</th>
+            <th style="width: 80px;">报修人</th>
+            <th>
+                <div class="dropdown orderBy">
+                    <button class="dropdown-toggle" type="button" id="createTime" data-toggle="dropdown" data-status="">最近创建时间<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="createTime" >
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="3">最远</a></li>
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="4">最近</a></li>
+                    </ul>
+                </div>
+            </th>
+            <th style="width: 300px;">检修人</th>
+            <th>
+                <div class="dropdown orderBy">
+                    <button class="dropdown-toggle" type="button" id="updataTime" data-toggle="dropdown" data-status="1">最近更新时间<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="updataTime" >
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="2">最远</a></li>
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="1">最近</a></li>
+                    </ul>
+
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--<tr>
+            <td><span class="COMPLETE"></span>维修中</td>
+            <td onclick="openHtml('tpl/order_detail.html','order')">201612013078545</td>
+            <td>暖通</td>
+            <td onclick="openHtml('tpl/device_detail.html','device')">C0空压机房</td>
+            <td onclick="openHtml('tpl/people_detail.html','people')">陆远</td>
+            <td>2016-12-01 14:38</td>
+            <td>钱宝忠...</td>
+            <td>2017-03-16 15:23</td>
+        </tr>
+        <tr>
+            <td><span class="CRITICAL"></span>维修中</td>
+            <td>201612013078545</td>
+            <td>暖通</td>
+            <td>C0空压机房</td>
+            <td>陆远</td>
+            <td>2016-12-01 14:38</td>
+            <td>钱宝忠...</td>
+            <td>2017-03-16 15:23</td>
+        </tr>
+        <tr>
+            <td><span class="OVERHAUL_ASSIGNED"></span>维修中</td>
+            <td>201612013078545</td>
+            <td>暖通</td>
+            <td>C0空压机房</td>
+            <td>陆远</td>
+            <td>2016-12-01 14:38</td>
+            <td>钱宝忠...</td>
+            <td>2017-03-16 15:23</td>
+        </tr>
+        <tr>
+            <td><span class="OVERHAUL_DISPATCH"></span>维修中</td>
+            <td>201612013078545</td>
+            <td>暖通</td>
+            <td>C0空压机房</td>
+            <td>陆远</td>
+            <td>2016-12-01 14:38</td>
+            <td>钱宝忠...</td>
+            <td>2017-03-16 15:23</td>
+        </tr>-->
+        </tbody>
+    </table>
+    <div class="page"></div>
+    <div class="total_box">总数：-</div>
+</div>
+
+
+
+

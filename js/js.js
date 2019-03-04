@@ -1,0 +1,21 @@
+angular.module("myapp",["ngRoute","mydata","mydirective","myctrl"])
+.config(["$routeProvider",function($routeProvider){
+        $routeProvider.when("/order",{
+            templateUrl:"tpl/order.html"
+        }).when("/people",{
+            templateUrl:"tpl/people.html"
+        }).when("/project",{
+            templateUrl:"tpl/project.html"
+        }).when("/device",{
+            templateUrl:"tpl/device.html"
+        }).when("/patrol",{
+            templateUrl:"tpl/patrol.html"
+        }).when("/ppm",{
+            templateUrl:"tpl/ppm.html"
+        }).when("/wait",{
+            templateUrl:"tpl/wait.html"
+        }).when("/admin",{
+            templateUrl:"tpl/admin.html"
+        }).otherwise("/order");
+}]);
+

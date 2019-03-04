@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm matLookBox">
+    <div class="header matLook">
+        <img src="../img/back2.png" class="back" onclick="delHtml('Materiel')" style="margin-top: -8px">
+        <span class="title"><i class="on">工单追踪</i><i>库存记录</i></span>
+        <button style="font-size: 30px;" class="matLookName">物料名称</button>
+    </div>
+    <div class="matLookList">
+        <table class="table text-center tracking">
+            <thead>
+            <tr>
+                <th>工单号</th>
+                <th>消耗数量</th>
+                <th>剩余数量</th>
+                <th>故障设备/环境</th>
+                <th>检修人</th>
+                <th>更新时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr>
+                <td onclick="parent.openHtml('tpl/order_detail.html','order')">201610193207783</td>
+                <td>强电</td>
+                <td>2016-10-19 18:11</td>
+                <td class="normal">正常</td>
+            </tr>
+            <tr>
+                <td>201610193207783</td>
+                <td>强电</td>
+                <td>2016-10-19 18:11</td>
+                <td class="fault">故障</td>
+            </tr>
+            <tr>
+                <td>201610193207783</td>
+                <td>强电</td>
+                <td>2016-10-19 18:11</td>
+                <td class="common">普通</td>
+            </tr>-->
+            </tbody>
+        </table>
+        <table class="table text-center stock" style="display: none">
+            <thead>
+            <tr>
+                <th>入库数量</th>
+                <th>操作人员</th>
+                <th>操作日期</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr>
+                <td>2016-10-19</td>
+                <td class="jilu"><span>a项电流a项电流 <i>565656</i> V</span><span>a项电流a项电流 <i>565656</i> V</span><span>a项电流 <i>565656</i> V</span><span>a项电流 <i>565656</i> V</span></td>
+            </tr>
+            <tr>
+                <td>2016-10-19</td>
+                <td class="jilu"><span>a项电流a项电流 <i>565656</i> V</span><span>a项电流a项电流 <i>565656</i> V</span><span>a项电流 <i>565656</i> V</span><span>a项电流 <i>565656</i> V</span></td>
+            </tr>
+            <tr>
+                <td>2016-10-19</td>
+                <td class="jilu"><span>a项电流a项电流 <i>565656</i> V</span><span>a项电流a项电流 <i>565656</i> V</span><span>a项电流 <i>565656</i> V</span><span>a项电流 <i>565656</i> V</span></td>
+            </tr>-->
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    Materiel.look();
+</script>
+</body>
+</html>
+

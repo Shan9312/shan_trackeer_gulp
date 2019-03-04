@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm admin" >
+    <div class="title" style="height:112px;">
+        <button class="back_a" onclick="delHtml('admin_loads')"></button>
+        <div class="mod">
+            <span>人均工单负荷</span>
+            <div class="data">
+                <ul class="num_img">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                </ul>
+            </div>
+            <div class="data con">
+                <i>人均工单</i>
+                <i><b id="avg">0</b>张</i>
+            </div>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol"></div>
+    <div class="data_select">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table" style="margin-top: 30px !important;">
+        <ul class="loads"></ul>
+    </div>
+</div>
+</body>
+<script>
+    int();
+    avg_order.int();
+
+</script>
+</html>
+

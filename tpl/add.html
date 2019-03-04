@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script src="../js/angular-animate.min.js"></script>
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../js/service.js"></script>
+    <script src="../js/directive.js"></script>
+    <script src="../js/ctrl.js"></script>
+    <script src="../js/js.js"></script>
+</head>
+<body>
+<!--<div class="addBox" id="orderAdd">
+    <div class="add_header">添加新工单<span class="project_icon"></span></div>
+    <div class="add_con">
+        <div class="add_con_left">
+            <div class="conBox">
+                <span class="title">保修位置</span>
+                <div class="con">
+                    <select id="order-repair-area" class="repair-area">
+                        <option>1号楼</option>
+                    </select>
+                    <select id="order-repair-cover" class="repair-cover">
+                        <option>1号楼</option>
+                    </select>
+                    <select id="order-repair-region" class="repair-region">
+                        <option>1号楼</option>
+                    </select>
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">条线</span>
+                <div class="con">
+                    <select id="order-line" class="addLineList">
+                        <option>强电</option>
+                    </select>
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">房间号<i>（可选）</i></span>
+                <div class="con">
+                    <input type="text" id="order-room" placeholder="房间号">
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">报修人<i>（客户名字）</i></span>
+                <div class="con">
+                    <input type="text" id="order-repaired-name" placeholder="姓名">
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">联系电话</span>
+                <div class="con">
+                    <input type="text" style="text-indent: 55px;text-align: left" maxlength="11" id="order-repaired-phone" placeholder="13812341234">
+                    <span class="areaCode">+86</span>
+                </div>
+            </div>
+        </div>
+        <div class="add_con_right">
+            <div class="conBox">
+                <span class="title">图片附件<i>（可选）<img src="../img/upload.png"></i></span>
+                <i>* 请最多上传3张图片</i>
+                <div class="imgbox" data-num="0">
+                    <img src="">
+                    <img src="">
+                    <img src="">
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">故障情况</span>
+                <div class="con">
+                    <textarea id="order-fault-situation">1. 电源缺少电瓶
+2. 火警控制表故障
+3. 少220v断电器一个
+4. 排水线路堵塞需要疏通
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <button class="confirm">确认添加</button>
+        <button class="cancel">取消</button>
+        <span class="notes">确认前请仔细核对信息，确保无误！</span>
+    </div>
+</div>-->
+<!--<div class="addBox" id="peopleAdd">
+    <div class="add_header">添加新人员<span class="project_icon"></span></div>
+    <div class="add_con">
+        <div class="add_con_left">
+            <div class="conBox">
+                <span class="title">姓名</span>
+                <div class="con">
+                    <input type="text" id="people-name" >
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">工号</span>
+                <div class="con">
+                    <input type="text" id="people-num" >
+                </div>
+            </div>
+            <div class="conBox">
+                <div style="width: 50%;float: left">
+                    <span class="title">条线</span>
+                    <div class="con">
+                        <select id="people-line" class="addLineList">
+                            <option value="">提提</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="width: 50%;float: left">
+                    <span class="title">职位</span>
+                    <div class="con">
+                        <select id="people-account" class="addRoleList"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">联系电话</span>
+                <div class="con">
+                    <input type="text" style="text-indent: 55px;text-align: left" maxlength="11" id="people-call" placeholder="13812341234">
+                    <span class="areaCode">+86</span>
+                </div>
+            </div>
+        </div>
+        <div class="add_con_right">
+            <div class="conBox">
+                <span class="title">邮箱地址</span>
+                <div class="con">
+                    <input type="text" id="people-email">
+                </div>
+            </div>
+            <div class="conBox">
+                <span class="title">照片</span>
+                <div class="con">
+                    <img src="../img/gravatar.png" class="headIcon">
+                </div>
+            </div>
+        </div>
+        <button class="confirm" onclick="people().add()">确认添加</button>
+        <button class="cancel" onclick="closeInfo()">取消</button>
+        <span class="notes">确认前请仔细核对信息，确保无误！</span>
+    </div>
+</div>-->
+<div class="addBox" id="editPass" style="width: 410px;height:425px;">
+    <div class="add_header">修改密码<span class="icon_job"></span></div>
+    <div class="add_con" style="height:363px;">
+        <div class="conBox">
+            <span class="title">旧密码</span>
+            <div class="con">
+                <span class="Init">*</span><input type="text" id="ed-old-pass" onchange="checkPass()">
+            </div>
+        </div>
+        <div class="conBox">
+            <span class="title">新密码</span>
+            <div class="con">
+                <span class="Init">*</span><input type="password" id="ed-new-pass">
+            </div>
+        </div>
+        <button class="confirm" onclick="editPass()" style="left:100px;">确认修改</button>
+        <button class="cancel" onclick="closeAdd()" style="right:80px;">取消</button>
+        <span class="notes" style="right:85px;">确认前请仔细核对信息，确保无误！</span>
+    </div>
+</div>
+</body>
+</html>

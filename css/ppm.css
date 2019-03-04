@@ -1,0 +1,1276 @@
+#ppm{
+    background: none;
+    position: absolute;
+    display: inline-block;
+    width: 929px;
+    height: 668px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.37);
+
+}
+.scheduleBox button,.tianjia button{
+    font-size: 16px;
+    color: #007aff;
+    font-weight: bold;
+}
+select{
+    font-size: 16px;
+}
+/*顶部*/
+ .head{
+    width: 100%;
+    height:50px;
+    overflow: hidden;
+     font-family: "黑体";
+}
+ .head .headLeft{
+    display: block;
+    width: 100px;
+    height:100%;
+    background:#fff url("../img/ppm/head1.png") no-repeat center center;
+    float: left;
+    margin-right: 10px;  cursor: pointer;
+     background-size: 100%;
+}
+.head .headLeft.on{
+    background-image: url("../img/ppm/head-left.jpg");
+}
+.head .headerRight{
+    width: 819px;
+    height:100%;
+    float: right;
+}
+ .head ul{
+    float: left;
+    height:100%;
+    white-space: nowrap;
+     overflow-y: hidden;
+     overflow-x: auto;
+     width: 700px;
+     background: #000;
+}
+.head ul::-webkit-scrollbar-thumb {
+    background-color: #6699cc;
+}
+.head ul li{
+    text-align: center;
+    height:100%;
+    display: inline-block;
+    width: 100px;
+    line-height: 50px;
+    position: relative;
+     transition:all 0.3s linear;
+}
+ .head ul li a{
+     display: inline-block;
+    font-size: 20px;
+    color:#6c747e;
+    font-weight: bold;
+    cursor: pointer;
+     width: 100%;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow :  ellipsis;
+     transition:all 0.3s linear;
+ }
+ .head ul li.on{
+    background: #fff;
+}
+ .head ul li.on a{
+    color:#222;
+}
+ .head ul li .operation{
+    width: 100%;
+    height:16px;
+    position: absolute;
+    bottom:-16px;left:0;
+    cursor: pointer;
+     transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear; /* Firefox 4 */
+     -webkit-transition: all 0.3s linear; /* Safari 和 Chrome */
+     -o-transition: all 0.3s linear; /* Opera */
+}
+.head ul li .operation .dell{
+    width: 17px;float: left;
+}
+.head ul li .operation .edit{
+    width: 24px;float: left;
+}
+.head ul li .operation .check{
+    width: 59px;float: left;
+}
+.head ul li .operation .check2{
+    width: 100px;float: left;
+}
+ .head ul li.on:hover .operation{
+    bottom:0;
+}
+ .head .helpImg{
+    width: 55px;
+    height: 20px;
+    background: url("../img/ppm/head3.png") no-repeat center center;
+    background-size:55px 20px;
+    margin-bottom: 17px;
+    position: absolute;
+    top: 14px;
+    right: 13px;
+     cursor:pointer;
+}
+ .head .helpImg img{
+    width: 270px;
+    position: absolute;
+    right:-8px;top:20px;
+    z-index: 3000;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,.3);
+    display: none;
+}
+ .head .helpImg:hover img{
+    display: block;
+}
+.addTab{
+    float: right;
+    background: #000;
+    width: 109px;
+    height:100%;
+    padding-left: 10px;
+}
+.addTab i{
+    width: 16px;
+    height:16px;
+    float: left;
+    background: url("../img/ppm/head2.png") no-repeat center center /16px 16px;
+    cursor: pointer;
+    margin-top: 17px;
+}
+/*主页内容*/
+#ppm .body {
+    width: 100%;
+    padding-top: 2px;
+    padding-left: 59px;
+    padding-right: 60px;
+    background: #fff;
+    height:488px;
+}
+#ppm .body h2{
+    margin-top: 22px;
+    font-weight: normal;
+}
+#ppm .body .qiyongzhong {
+    border-bottom: 1px solid #E4E4E4;
+    margin-top: 22px;
+}
+#ppm .body .qiyongzhong h3 {
+    margin-left: 10px;
+    position: relative;
+    font-size: 21px;
+    font-weight: bold;
+}
+#ppm .body .qiyongzhong h3 span {
+    position: absolute;
+    right:17px;top:5px;
+    font-size: 16px;
+    padding-left: 20px;
+    line-height: 20px;
+    background: url("../img/ppm/add_ppm_big.png") no-repeat left center;
+    background-size:18px 18px ;
+    cursor: pointer;
+}
+.planBox{
+    position: relative;
+    max-height:127px;
+    overflow: hidden;
+    padding-right: 10px;
+    padding-left: 40px;
+    margin-top: 13px;
+    margin-left: -29px;
+    overflow-y: auto;
+}
+#ppm .body .qiyongzhong ul {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    display: inline-block;
+}
+#ppm .body .qiyongzhong ul li{
+    padding:0 10px;
+    width: 680px;height:42px;
+    position: relative;
+    cursor: pointer;
+}
+#ppm .body .qiyongzhong ul li.on{
+    background: #e0fbc0;
+}
+#ppm .body .qiyongzhong ul li.on>span.state{
+    display: block;
+}
+#ppm .body .qiyongzhong ul li.on .plan_time{
+    background: -webkit-linear-gradient(left, rgba(0,0,0,.5) 0%, #CDF1A2 70%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(0,0,0,.5) 0%, #CDF1A2 70%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(0,0,0,.5) 0%, #CDF1A2 70%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(0,0,0,.5) 0% , #CDF1A2 70%); /* 标准的语法 */
+}
+#ppm .body .qiyongzhong ul li.on .plan_time i{
+    color: #E0FBC0;
+}
+#ppm .body .qiyongzhong ul li.on .plan_time i.author{
+    color: #487B0C;
+}
+#ppm .body .qiyongzhong ul li>span{
+    font-size: 16px;color: #50555c;
+    font-weight: 600;margin-right:5px;
+}
+#ppm .body .qiyongzhong ul li .planName{
+   width:520px;display: block;
+    height:28px;overflow: hidden;
+    white-space:nowrap;line-height: 28px;
+    font-size: 16px;color: #50555c;
+    font-weight: 600;margin-right:5px;
+    float: left;
+}
+#ppm .body .qiyongzhong ul li>span:last-child{
+    margin-right:0;
+}
+#ppm .body .qiyongzhong ul li>span.num{
+    font-size: 13px;display: block;width: 70px;
+    overflow: hidden;height:28px;float: left;line-height: 28px;
+    text-align: center;
+}
+#ppm .body .qiyongzhong ul li>span.state{
+    color:#3d940b;overflow: hidden;height:28px;
+    display: none;float: left;line-height: 28px;
+}
+#ppm .body .qiyongzhong ul li>span.num i{
+    color:#3d940b;
+}
+#ppm .body .qiyongzhong ul li .plan_time{
+    height:16px;line-height: 16px;
+    font-size: 12px;font-family: SimHei;
+    width: 680px;position: absolute;
+    bottom:0;left:0;padding: 0 10px;
+}
+#ppm .body .qiyongzhong ul li .plan_time i{
+    display: inline-block;
+}
+#ppm .body .qiyongzhong ul li .plan_time .author{
+    float: right;
+}
+#ppm .body .qiyongzhong ul li .handle{
+    position: absolute;
+    right:-85px;top:0;
+}
+#ppm .body .qiyongzhong ul li .handle i{
+    color: #007aff;
+    font-weight: bold;font-size: 17px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+#ppm .body .qiyongzhong ul li .handle img{
+    width: 26px;height:16px;
+    padding-left: 10px;
+    border-left:1px solid #ccc;
+    margin-bottom: -2px;
+    cursor: pointer;
+}
+#ppm .body .qiyongzhong ul li .overtime{
+    width: 48px;height: 42px;
+    background: #f5b5b1;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 21px;
+    position: absolute;
+    top:0;left:-48px;
+    animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;
+    -moz-animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;	/* Firefox */
+    -webkit-animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;	/* Opera */
+    /*display: none;*/
+}
+/*#ppm .body .qiyongzhong ul li.on .overtime{
+    display: block;
+}*/
+#ppm .body .qiyongzhong ul li .overtime span{
+    display: block;color: #ab3030;
+    font-size: 14px;font-weight: bold;
+}
+
+.setBox{
+    width: 80px;
+    height:auto;
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    box-shadow: 0 0 4px rgba(0,0,0,0.39);
+    background: #fff;
+    left:798px;
+}
+.setBox ul li{
+    display: block;
+    color: #007aff;
+    border-bottom:1px dashed #d2d2d2 ;
+    cursor: pointer;
+}
+.setBox ul li:last-child{
+    border: 0;
+}
+.setBox span{
+    position: absolute;
+    bottom: -12px;
+    left:30px;
+    background: url("../img/ppm/setbg.png") no-repeat center /100%;
+    width: 20px;
+    height:12px;
+}
+
+/*内页内容*/
+#ppm .body-con{
+    width: 100%;height: 488px;
+}
+#ppm .body-con .con-top{
+    width: 100%;height:30px;
+    line-height: 30px;
+    background: #50555c;
+}
+#ppm .body-con .con-bottom{
+    width:100%;
+    height:459px;
+    background:url("../img/ppm/ppmbg.jpg") repeat-y;
+    position: relative;
+}
+/*内页内容 top*/
+#ppm .body-con .con-top>span{
+    color: #e0e1e2;
+    font-size: 12px;
+    text-align: center;
+    float: left;
+}
+.con-top span:nth-child(1){
+    width: 95px;
+}
+.con-top span:nth-child(2){
+    width: 149px;
+}
+.con-top span:nth-child(3){
+    width: 143px;
+}
+.con-top span:nth-child(4){
+    width: 46px;
+}
+.con-top span:nth-child(5){
+    width: 45px;
+}
+
+/*内页内容 bottom*/
+.conTable{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.con-bottom table {
+    width: 475px;
+    font-size: 12px;
+    text-align: center;
+    float: left;
+    border-collapse:separate;
+    border-spacing:0 10px;
+    position: relative;
+    top:-10px;
+}
+.con-bottom table tr{
+    padding-bottom: 5px;
+}
+.con-bottom table tr td{
+    position: relative;
+    white-space: inherit;
+}
+.con-bottom table tr td:first-child{
+    background: #50555c;
+    color: #fff;
+    width: 95px;
+    overflow: hidden;
+    position: relative;
+    font-size: 14px;
+    padding-left:8px;
+    padding-right:16px;
+}
+.del{
+    width: 100%;
+    height:16px;
+    position: absolute;
+    left:0;bottom:-16px;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear; /* Firefox 4 */
+    -webkit-transition: all 0.3s linear; /* Safari 和 Chrome */
+    -o-transition: all 0.3s linear; /* Opera */
+    cursor: pointer;
+}
+.del .sys_del{
+    width:17px;float: left;height:100%;
+}
+.del .sys_xie{
+    width:24px;float: left;height:100%;
+}
+.del .sys_add{
+    width:54px;float: left;height:100%;
+}
+.con-bottom table tr td:first-child:hover .del{
+    bottom:0;
+}
+.con-bottom table tr td:last-child{
+    width: 380px;
+}
+.conBox{
+    width: 100%;
+    min-height: 34px;
+}
+.conBox>li{
+    height:34px;
+    line-height: 34px;
+    border-bottom: 1px solid #fff;
+}
+.conBox>li:last-child{
+    border-bottom: 0;
+}
+.conBox>li>span{
+    float: left;
+    white-space: nowrap;
+    overflow:hidden; text-overflow:ellipsis;
+    cursor: default;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+.conBox>li>span:first-child{
+    width:149px;
+    height:34px;
+    background: #e4e4e4;
+    color: #61656b;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.conBox>li>span:first-child .del{
+    width: 17px;
+    height:100%;
+    left:-17px;top:0;
+}
+.conBox>li>span:first-child .del img{
+    width: 17px;height:17px;
+    display: block;
+    float: none;
+}
+.conBox>li>span:first-child:hover .del{
+    left:0;
+}
+.conBox>li>span:nth-child(2){
+    width:143px;
+    background: #f3f3f3;
+    color: #b2b2b2;
+    cursor: pointer;
+}
+.conBox>li>span:nth-child(3){
+    width:46px;
+    color: #aaaaaa;
+    font-weight: bold;
+}
+.conBox>li>span:nth-child(4){
+    width:37px;color: #aaaaaa;
+    font-weight: bold;
+    overflow: inherit;
+    position: relative;
+}
+.conBox>li>span.hoverRes{
+    cursor: default;
+}
+.conBox>li>span.hoverRes:hover .Respon{
+    display: block;
+}
+.conBox>li>span.hoverRes .Respon{
+    width: 181px;height:140px;
+    background: rgba(89,94,101,.9);
+    position: absolute;
+    top:-22px;right:-215px;
+    z-index: 1000;
+    padding-left: 18px;
+    padding-right: 12px;
+    border-radius: 5px;
+    display: none;
+}
+.conBox>li>span.hoverRes .Respon span,.conBox>li>span.hoverRes .Respon p,.conBox>li>span.hoverRes .Respon i{
+    width: 100%;
+    color: #fff;line-height: 20px;
+    font-size: 16px;
+    text-align: left;
+    display: block;
+    margin-top: 5px;
+}
+.conBox>li>span.hoverRes .Respon p{
+    font-size: 11px;
+    font-weight: normal;
+    white-space: normal;
+    height: 80px;
+    font-family: '宋体';
+}
+.conBox>li>span.hoverRes .Respon i{
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.conBox>li>span.hoverRes .Respon img{
+    position: absolute;
+    top:30px;left:-13px;
+}
+.con-bottom table tr td:first-child.ad{
+    padding: 0;
+}
+#addSystem{
+    width:100%;
+    height:34px;
+    background:#50555c url("../img/ppm/add.png") no-repeat center;
+    background-size:15px 15px ;
+    cursor: pointer;
+}
+#addSystem:hover{
+    background:#fff url("../img/ppm/add1.png") no-repeat center;
+    background-size:15px 15px ;
+}
+/*时间表*/
+.timeBox{
+    overflow: hidden;
+    width: 449px;
+    height: 614px;
+    position: absolute;
+    top:-30px;right:0;
+}
+.timeBox .title{
+    height:30px;
+    overflow: hidden;
+    position: relative;
+}
+#conBo{
+    height:588px;
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+}
+.timeBox .con{
+    min-height: 34px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.timeBox ul{
+    height:34px;
+    white-space: nowrap;
+}
+.timeBox ul li{
+    max-width: 150px;
+    height:34px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.timeBox ul li:last-child{
+    border-right: 0!important;
+}
+.timeBox ul li span{
+    width: 29px;
+    height:34px;
+    margin-right: 1px;
+    float: left;
+    cursor: default;
+    box-sizing: border-box;
+    position: relative;
+}
+/*时间表背景*/
+.timeBox .bg{
+    height:614px;
+    overflow:hidden;
+    position: relative;
+}
+.timeBox .bg li{
+    width: 30px;
+    border-right:1px solid #e4e4e4;
+    height:100%
+}
+.timeBox .bg li.on{
+    background: #b2d7ff;
+}
+/*时间表左右箭头*/
+#timeCon{
+    position: absolute;
+    top:0;
+}
+#timeLeft{
+    width: 33px;
+    height:33px;
+    background: url("../img/ppm/leftlight.png") no-repeat center center;
+    background-size:33px 33px;
+    position: absolute;
+    top:258px;left:0;
+    z-index: 100;
+    cursor: pointer;
+}
+#timeRight{
+    width: 33px;
+    height:33px;
+    background: url("../img/ppm/rightlight.png");
+    background-size:33px 33px;
+    position: absolute;
+    top:258px;right:12px;
+    z-index: 100;
+    cursor: pointer;
+}
+#timeLeft:hover{
+    background: url("../img/ppm/leftdark.png") no-repeat center center;
+    background-size:33px 33px;
+}
+#timeRight:hover{
+    background: url("../img/ppm/rightdark.png") no-repeat center center;
+    background-size:33px 33px;
+}
+/*时间表title*/
+.timeBox .title ul li{
+    line-height: 15px;
+    background: #007aff;font-size: 12px;color: #fff;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+}
+.timeBox .title ul li .month{
+    width: 100%;
+    height:15px;
+    font-weight: bold;
+}
+.timeBox .title ul li i{
+    float: left;
+    width: 30px;color: #fff;
+}
+.timeBox .title ul li i:last-child{
+    width: 29px;
+}
+/*时间表con*/
+.timeBox .con ul li span.ongoing{
+    border:3px solid #76d900;
+}
+.timeBox .con ul li span.ongoing:hover{
+    background: #fffac3;
+}
+.timeBox .con ul li span.unfinished{
+    border:2px solid #ff1d1d;
+    animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;
+    -moz-animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;	/* Firefox */
+    -webkit-animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: overtime .5s cubic-bezier(0.79, 0.01, 0.04, 0.99) infinite alternate;	/* Opera */
+    z-index: 5;
+}
+.timeBox .con ul li span.unfinished:hover{
+    background: #fffac3;
+}
+.timeBox .con ul li span.finish{
+    background: #76d900;
+}
+.timeBox .con ul li span.finish:hover{
+    background: #bae744;
+}
+.timeBox .con ul li span.delay{
+    background: #ffcb1d;
+}
+.timeBox .con ul li span.delay:hover{
+    background: #ffe052;
+}
+.timeBox .con ul li span.default{
+    background: #d9d9d9;
+}
+/*时间表con hover弹出*/
+.hover-box{
+    width:166px;
+    height: 220px;
+    position: absolute;
+    top:100px;left:100px;
+    z-index: 110;
+    display: none;
+}
+.hover-box .hoverArrow{
+    width: 23px;height:14px;
+    position: absolute;
+    top:-13px;left:49px;
+}
+.hover-box .hover-left{
+    width: 166px;height:100%;
+    position: absolute;
+    top:0;left:0;
+    z-index: 1;
+    background: #007aff;
+    border-radius: 5px;
+}
+.hover-box .hover-right{
+    width: 90px;height:100%;
+    position: absolute;
+    top:0;left:163px;
+    background: #50555c;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+.hover-box .hover-left .hover-hlt{
+    overflow: hidden;
+    margin-top: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+}
+.hover-box .hover-left button{
+    height:22px;
+    border-radius: 3px;
+    color: #007aff;
+    float: left;
+    margin-top: 5px;
+    cursor: default;
+    background: none;
+}
+.hover-box .hover-left button>img{
+    height:21px;
+    width: auto;
+}
+/*.hover-box .hover-left .fin{
+    background: #76d900;
+}
+.hover-box .hover-left .dela{
+    background: #ffcb1d;
+}
+.hover-box .hover-left .unfin{
+    background: none;
+    border:1px solid #ff8e8e;
+    color: #ff8e8e;
+}
+.hover-box .hover-left .ongo{
+    background: none;
+    border:1px solid #76d900;
+    color: #76d900;
+}
+.hover-box .hover-left .ongo{
+    background: none;
+    border:1px solid #76d900;
+    color: #76d900;
+}*/
+.hover-box .hover-left img{
+    width: 30px;
+    float: right;
+}
+.hover-box .hover-left .hlb{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.hover-box .hover-left .hlb span{
+    display: block;
+    line-height: 16px;
+    font-size: 11px;
+    width: 100%;
+    height:16px;
+    text-align: left;
+    color: #fff;
+    overflow: hidden;
+    white-space:nowrap;
+    padding-right: 10px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+}
+.hover-box .hover-right span{
+    display: block;
+    color: #fff688;
+    width: 100%;font-size: 14px;
+    line-height: 34px;
+    margin-top: 5px;
+    text-align: center;
+}
+.hover-box .hover-right i{
+    display: block;
+    color: #b8b577;text-align: center;
+    width: 100%;font-size: 12px;
+    line-height: 20px;
+}
+.hover-box .hover-right i.on{
+    color: #fff688;
+}
+
+/*滚动条*/
+.scrollBox{
+    width: 10px;
+    height:588px;
+    background: #E4E4E4;
+    position: absolute;
+    top:0;right:0;
+    z-index: 1500;
+    cursor: default;
+    display: none;
+}
+#scroll,#scrollon,#scrollno{
+    width: 10px;
+    border-radius: 5px;
+    background: #50555C;
+    position: absolute;
+    top:0;left:0;
+    cursor: default;
+}
+/*添加数据*/
+.addTask{
+    display: block;
+    width:16px;
+    height: 16px;
+    background: url("../img/ppm/addwhite.png") no-repeat center;
+    background-size: 16px 16px;
+    position: absolute;
+    bottom:0;right:0;
+    cursor: pointer;
+}
+.addTask:hover{
+    background: url("../img/ppm/addblack.png") no-repeat center;
+    background-size: 16px 16px;
+}
+
+/*弹出框-新建PPM*/
+ .new {
+    position: absolute;
+    width: 394px;
+    height: 350px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.37);
+    top: 150px;
+    left: 270px;
+    background-color: white;
+    display: none;
+}
+ .new h1 {
+    padding-top: 21px;
+    padding-left: 43px;
+    font-size: 23px;
+    line-height: 23px;
+    height: 63px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e4e4e4;
+}
+ .new h1 img {
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+}
+ .new label {
+    padding-top: 19px;
+    padding-left: 45px;
+    display: block;
+    font-size: 18px;
+}
+ .new input {
+    border-bottom: 1px solid #e4e4e4;
+    padding: 20px 10px 0;
+    text-align: center;
+    margin-left: 95px;
+    font-size: 16px;
+    color: #50555c;
+
+}
+ .bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+ .bottom button:nth-child(1) {
+    padding: 15px 35px;
+    border-radius: 50px;
+    background-color: #007AFF;
+    color: white;
+
+    font-size: 18px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.37);
+    letter-spacing:5px;
+}
+ .bottom button:nth-child(2) {
+
+    font-size: 16px;
+    color: #AAAAAA;
+    background-color: white;
+    margin-left: 20px;
+}
+.noEnabled .head ul li .operation .dell,.noEnabled .head ul li .operation .edit,.noEnabled .head ul li .operation .check,.noEnabled .addTab i,.noEnabled .addTask,.noEnabled .con-bottom table tr td:first-child:hover .del,.noEnabled .conBox>li>span:first-child:hover .del,.noEnabled #addSystem,.noEnabled .ad,.manager .mana,.manager .remindClick{
+    display: none!important;
+}
+.manager .planBox{
+    max-height: 340px;
+}
+.message{
+    position: absolute;
+    z-index: 10000;
+    left:260px;
+    display: none;
+}
+.message span{
+    background: #fff;
+    display: inline-block;
+    min-width: 100px;
+    max-width: 252px;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    padding: 0 10px;
+    color: #ccc;
+    word-wrap: break-word;
+}
+.message i{
+    width: 10px;
+    height:10px;
+    position: absolute;
+    background: url("../img/ppm/message.png") no-repeat center center;
+    background-size: 12px 8px;
+    top:-8px;
+    left:50px;
+}
+
+#loading{
+    width: 929px;
+    height: 664px;
+    position: absolute;
+    top:0;left:0;
+    display: none;
+}
+#loading img{
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;margin: auto;
+}
+
+
+/*条线、系统修改*/
+
+.editBox{
+    width: 186px;
+    background: #fff;
+    position: absolute;
+    top:60px;
+    left:100px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.37);
+    border-radius: 5px;
+    z-index:2000;
+    max-height:552px;
+}
+.editBox .icon_caret{
+    position: absolute;
+    color: #fff;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 10px solid;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top:-10px;left:84px;
+}
+.editBox .box{
+    border-bottom: 1px solid #e4e4e4;
+    position: relative;
+    margin-top: 8px;
+}
+.editBox .lok{
+    padding:15px 10px ;
+    overflow: hidden;
+}
+.editBox .box:last-child{
+    border-bottom: 0;
+}
+.editBox .box b{
+    line-height: 45px;
+    margin-left: 22px;
+    font-size: 15px;
+}
+.editBox .box .use,.editBox .box .no{
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.editBox .box .no{
+    max-height: 200px;
+}
+.editBox .box ul li{
+    line-height: 35px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 22px;
+}
+.editBox .box .no li{
+    border-bottom: 1px solid #e4e4e4;
+}
+.editBox .box ul li i{
+    width: 13px;height: 13px;
+    position: absolute;
+    top:10px;right:10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.editBox .box ul li:hover i{
+    background-image: url("../img/ppm/close.png");
+}
+.editBox .box ul.no li i{
+    background-image: url("../img/ppm/add2.png");
+}
+.lok span{
+    float: left;
+    width: 33.3333%;
+    line-height: 30px;
+    text-align: center;
+}
+
+/*日程列表*/
+.schedule{
+    border-bottom: 2px solid #e4e4e4;
+    min-height: 100px;
+    max-height: 189px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 480px;
+    overflow-y: auto;
+}
+.schedule li{
+    width:444px;height:40px;
+    line-height: 20px;
+    padding-left: 15px;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.schedule li i{
+    font-style: normal;
+    color:#50555C;
+}
+.schedule li .branarea i{
+    color:#007aff;
+    display: inline-block;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: -6px;
+    text-overflow:ellipsis;
+}
+.schedule li span:nth-child(5){
+    margin-right:20px;
+    margin-left: 5px;
+}
+.schedule li button{
+    float: right;
+    margin-top: 2px;
+}
+.schedule li button:nth-child(3){
+    margin-right: 10px;
+}
+.Bran{
+    width: 278px;
+    display: none;
+    background: #fff;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    top:150px;right:56px;
+    z-index: 100;
+    overflow: hidden;
+}
+.Bran .BranTop{
+    position: relative;
+    overflow: hidden;
+}
+.Bran .BranTop ul{
+    max-height:100px;
+    overflow: hidden;
+    padding-left: 10px;
+    overflow-y: auto;
+}
+.Bran .BranTop ul li{
+    float: left;
+    width: 64px;
+    height:40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.Bran .BranTop li em{
+    width: 64px;
+    height:30px;
+    position: absolute;
+    top:0;left:0;
+    transform: translateX(-2px);
+}
+.Bran .BranBottom{
+    padding-left: 18px;
+    width: 100%;
+    height:42px;
+    background: #f8f8f8;
+    line-height: 45px;
+    box-sizing: border-box;
+}
+.Bran label{
+    display: inline-block;
+    width: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    height:30px;
+    line-height: 30px;
+    margin-bottom: -7px;
+}
+
+/*区域选择*/
+.area{
+    width: 295px;
+    height:173px;
+    border:1px solid #e4e4e4;
+    position: absolute;
+    top:-10px;
+    left: 24px;
+    background: #fff;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+}
+.area .areaTop{
+    overflow: hidden;
+    height:128px;
+    overflow-y: auto;
+}
+.area .areaTop ul{
+    width: 100%;
+    overflow: hidden;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+.area .areaTop li{
+    float: left;
+    width:68px;
+    height:30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+.area .areaTop li em{
+    width: 68px;
+    height:28px;
+    position: absolute;
+    top:0;left:0;
+    transform: translateX(-5px);
+}
+.areabg{
+    border:1px solid #007AFF;
+}
+.area .areaTop li:nth-child(1),.area .areaTop li:nth-child(2),.area .areaTop li:nth-child(3),.area .areaTop li:nth-child(4){
+    margin-top: 8px;
+}
+.area label{
+    display: inline-block;
+    width: 50px;
+    height:30px;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 30px;
+    margin-bottom: -7px;
+}
+.area .areaTop li input[type=button]{
+    width: 8px;
+    height:8px;
+    margin-right: 3px;
+    background:url("../img/ppm/x.png") no-repeat center;
+    background-size: 12px 12px;
+    transform: translateY(-12px);
+}
+.area .areaTop li input[type=button]:hover{
+    background:url("../img/ppm/xx.png") no-repeat center;
+    background-size: 12px 12px;
+}
+.area .areaBottom{
+    line-height: 45px;
+    width: 100%;
+    height:45px;
+    background: #F8F8F8;
+    position: absolute;
+    bottom:0;
+}
+.area .areaBottom .areaqu{
+    float: left;
+    width: 80px;
+    margin-left: 18px;
+}
+.area .areaBottom .areaqu label{
+    font-size: 14px;
+    margin-bottom: -10px;
+}
+.area .areaBottom .areaqu input{
+    margin-bottom: -1px;
+}
+.area .areaBottom .areaadd{
+    float: right;
+    width: 100px;
+    line-height: 45px;
+    background: none;
+    font-size: 14px;
+    color:#007aff;
+}
+.area .areaBottom .areaadd input[type=text]{
+    width: 80px;
+    background: none;
+    text-align: center;
+    border-bottom: 1px solid #007aff;
+    margin-right: -20px;
+    line-height: normal;
+    color:#50555C;
+}
+#areaDelMsg{
+    display: none;
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    margin: auto;
+    width: 135px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    height:30px;
+    line-height: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+#areaDelMsg i{
+    color: #ffcb1d;
+}
+
+/*自定义选择控件*/
+input[type=checkbox],input[type=radio]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 11px;
+    margin: 0;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 3px;
+    margin-bottom: 10px;
+}
+input[type=checkbox]:active,input[type=radio]:active {
+    border-color: #007AFF;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+input[type=checkbox]:checked,input[type=radio]:checked {
+    border-color: #007AFF;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+input[type=checkbox]:checked::after {
+    content: url("../img/ppm/dian.jpg");
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    left: 2px;
+}
+.relation-work-list{
+
+}

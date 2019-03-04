@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/people.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div class="ifm peopleDetails edit-people">
+    <header>
+        <img src="../img/back2.png" class="back" onclick="delHtml('people')">
+        <div class="con">
+            <img src="../img/gravatar.png" class="face">
+            <div class="operation">
+                <button class="peopleDel">删除</button>
+                <span class="lins"></span>
+                <button class="peopleEdit">编辑</button>
+            </div>
+            <div class="ziliao">
+                <div class="boxcon1">
+                    <span class="name-span">--</span>
+                    <span class="line">--</span>
+                </div>
+                <div class="boxcon2">
+                    <span><b class="icon_person"></b>工号<i>--</i></span>
+                    <span><b class="icon_phone"></b>手机<i>--</i></span>
+                    <span><b class="icon_mail"></b>邮箱<i>--</i></span>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="update-user-info">
+            信息更新人：
+            <span>
+
+            </span>
+        </div>
+    </header>
+    <div class="tableTab"><span class="on"><i class="icon_t_order">
+        </i>工单记录</span><span><i class="icon_t_watch">
+        </i>巡视记录</span>
+    </div>
+    <table class="table text-center peopleOne">
+        <thead>
+            <tr>
+                <th>工单号</th>
+                <th>
+                    <div class="dropdown line">
+                        <button class="dropdown-toggle" type="button" id="people-one-line" data-toggle="dropdown" data-status="">
+                        条线<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="people-one-line"></ul>
+                    </div>
+                </th>
+                <th>处理时间</th>
+                <th>动作</th>
+                <th>对应设备</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!--<tr>
+            <td onclick="parent.openHtml('tpl/order_detail.html','order')">201610193207783</td>
+            <td>强电</td>
+            <td>2016-10-19 18:11</td>
+            <td>任务指派 个大力 马小亮</td>
+            <td>VR空调外籍</td>
+        </tr>-->
+        </tbody>
+    </table>
+    <table class="table text-center peoplePatrol" style="display: none">
+        <thead>
+        <tr>
+            <th>位置</th>
+            <th>
+                <div class="dropdown line1">
+                    <button class="dropdown-toggle" type="button" id="people-one--roomline" data-toggle="dropdown" data-status="">条线<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="people-one-roomline"></ul>
+                </div>
+            </th>
+            <th>巡视时间</th>
+            <th>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="roomSpecific" data-toggle="dropdown" data-status="">状态<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="roomSpecific">
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="">全部</a></li>
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1" data-page="1">正常</a></li>
+                        <li role="presentation"><a href="javascript:;" role="menuitem" tabindex="-1"  data-page="2">故障</a></li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--<tr>
+            <td>201610193207783</td>
+            <td>强电</td>
+            <td>2016-10-19 18:11</td>
+            <td class="fault">故障<span>查看</span></td>
+        </tr>
+        <tr>
+            <td>201610193207783</td>
+            <td>强电</td>
+            <td>2016-10-19 18:11</td>
+            <td class="common">普通</td>
+        </tr>-->
+        </tbody>
+    </table>
+</div>
+<script>
+    People.oneInt()
+</script>
+</body>
+</html>
+

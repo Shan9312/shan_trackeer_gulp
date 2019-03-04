@@ -1,0 +1,200 @@
+<link rel="stylesheet" href="css/ppm.css?vn=1.1"/>
+<div id="ppm" ng-controller="ppm">
+    <div class="head">
+        <a class="headLeft"></a>
+        <div class="headerRight">
+            <ul id="ppmTab">
+                <!--<li id="job_542">
+                    <a>强电</a>
+                    <div class="operation">
+                        <img src="img/ppm/job_del.png" class="dell">
+                        <img src="img/ppm/job_xie.png" class="edit">
+                        <img src="img/ppm/job_p0.png" class="check">
+                        <img src="img/ppm/job_p.png" class="check2">
+                    </div>
+                </li>-->
+            </ul>
+            <div class="addTab"><i></i></div>
+        </div>
+        <div class="helpImg">
+            <img src="img/ppm/bangzhu.png">
+        </div>
+    </div>
+    <div class="body">
+        <h2>预计划管理 Planned Preventive Maintenance</h2>
+        <div class="qiyongzhong">
+            <h3>启用中</h3>
+            <div class="planBox" style="padding-top:10px">
+                <ul id="onuser">
+                    <!--<li id="plan_1" data-year="2016" class="on">
+                        <div class="overtime">
+                            <span>128</span><span>已超时</span>
+                        </div>
+                        <span class="planName">国际会展中心计划2016</span>
+                        <span class="num"><i>561</i>/754</span>
+                        <span class="handle mana">
+                            <i>停用</i>
+                            <img src="img/ppm/set.png" class="set_img">
+                        </span>
+                        <span class="state">查看中</span>
+                        <div class="plan_time">
+                            <i>年份 2016</i>
+                            <i>创建时间 2016-09-14 17:45</i>
+                            <i>启用时间 2016-12-12 16:58</i>
+                            <i class="author">作者：浦江物业 项目：国家展会中心</i>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="qiyongzhong mana" style="border-bottom: 0;margin-bottom: 0">
+            <h3>未启用<span ng-click="plan.add()">新建</span></h3>
+            <div class="planBox">
+                <ul id="nouser">
+                    <!--<li id="plan_24" data-year="2017">
+                        <span class="planName">国展中心计划2017</span>
+                        <div class="plan_time">
+                            <i>年份 2017</i>
+                            <i>创建时间 2016-12-12 10:33</i>
+                            <i>最后编辑 2016-12-12 17:40</i>
+                            <i class="author">作者：Admin 项目：国家展会中心</i>
+                        </div>
+                        <span class="num"><i>0</i>/754</span>
+                        <span class="handle">
+                            <i>启用</i>
+                            <img src="img/ppm/set.png">
+                        </span>
+                        <span class="state">编辑中</span>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-con" style="display: none">
+        <div class="con-top">
+            <span>系统</span>
+            <span>保养类别</span>
+            <span>服务区域</span>
+            <span>周期</span>
+            <span>负责方</span>
+        </div>
+        <div class="con-bottom">
+            <div class="conTable">
+                <table>
+                    <tbody>
+                        <!--<tr id="system_5">
+                            <td>综合供电
+                                <div class="del">
+                                    <img src="img/ppm/sys_del.png" alt="删除" class="sys_del" onclick="clickDelSys(5)">
+                                    <img src="img/ppm/job_xie.png" alt="编辑" class="sys_xie edli" onclick="clickEditSys(5)">
+                                    <img src="img/ppm/sys_add.png" alt="添加" class="sys_add" onclick="makeInfo('ppm/ppm_addTask.html?id=5',934,490)">
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="conBox">
+                                    <li id="task_1">
+                                        <span onclick="mes(this)" class="mes">展厅展位箱、落地柜
+                                            <i class="del">
+                                                <img src="img/ppm/sys_del.png" alt="删除" class="task_del" onclick="clickDelTask(1,5)">
+                                                <img src="img/ppm/sys_xie.png" alt="编辑" class="task_edit" onclick="clickEditTask(1,5)">
+                                            </i>
+                                        </span>
+                                        <span onclick="mes(this)" class="mes">1H,2H,3H,4.1H,4.2H,5.1H,5.2H,6.1H,6.2H,7.1H,7.2H,8.1H,8.2H,EH,GH,NH,WH</span>
+                                        <span>Y</span>
+                                        <span class="hoverRes">浦江</span>
+                                    </li>
+                                    <li id="task_2">
+                                        <span onclick="mes(this)" class="mes">强电机房电箱
+                                            <i class="del">
+                                                <img src="img/ppm/sys_del.png" alt="删除" class="task_del" onclick="clickDelTask(2,5)">
+                                                <img src="img/ppm/sys_xie.png" alt="编辑" class="task_edit" onclick="clickEditTask(2,5)">
+                                            </i>
+                                        </span>
+                                        <span onclick="mes(this)" class="mes">1H,2H,3H,4.1H,4.2H,5.1H,5.2H,6.1H,6.2H,7.1H,7.2H,8.1H,8.2H,EH,GH,NH,WH</span>
+                                        <span>Y</span>
+                                        <span class="hoverRes">浦江</span>
+                                    </li>
+                                    <li id="task_3">
+                                        <span onclick="mes(this)" class="mes">弱电机房电箱
+                                            <i class="del">
+                                                <img src="img/ppm/sys_del.png" alt="删除" class="task_del" onclick="clickDelTask(3,5)">
+                                                <img src="img/ppm/sys_xie.png" alt="编辑" class="task_edit" onclick="clickEditTask(3,5)">
+                                            </i>
+                                        </span>
+                                        <span onclick="mes(this)" class="mes">1H,2H,3H,4.1H,4.2H,5.1H,5.2H,6.1H,6.2H,7.1H,7.2H,8.1H,8.2H,EH,GH,NH,WH</span>
+                                        <span>Y</span>
+                                        <span class="hoverRes">浦江</span>
+                                    </li>
+                                    <li id="task_4">
+                                        <span onclick="mes(this)" class="mes">外围公共配电箱
+                                            <i class="del">
+                                                <img src="img/ppm/sys_del.png" alt="删除" class="task_del" onclick="clickDelTask(4,5)">
+                                                <img src="img/ppm/sys_xie.png" alt="编辑" class="task_edit" onclick="clickEditTask(4,5)">
+                                            </i>
+                                        </span>
+                                        <span onclick="mes(this)" class="mes">1H,2H,3H,4.1H,4.2H,5.1H,5.2H,6.1H,6.2H,7.1H,7.2H,8.1H,8.2H,EH,GH,NH,WH</span>
+                                        <span>Y</span>
+                                        <span class="hoverRes">浦江</span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>-->
+                        <tr><td class="ad"><div id="addSystem"></div></td><td class="ad"></td></tr>
+                    </tbody>
+                </table>
+                <div class="message" id="mes"><span class="mes"></span><i class="mes"></i></div>
+            </div>
+            <div class="timeBox">
+                <div id="timeCon">
+                    <div class="title"><ul></ul></div>
+                    <div id="conBo">
+                        <div class="bo"></div>
+                    </div>
+                    <ul class="bg"></ul>
+                </div>
+                <div class="hover-box" id="hover-box">
+                    <img src="img/ppm/hoverbg.png" class="hoverArrow">
+                    <div class="hover-left">
+                        <div class="hover-hlt" id="default_hover">
+                            <button class="default hover"><img src="img/ppm/default.png"></button>
+                        </div>
+                        <div class="hover-hlt" id="unfinished_hover">
+                            <button class="unfin hover"><img src="img/ppm/weitag.png"></button>
+                            <img src="img/ppm/bell.png" alt="提醒" class="hover remindClick">
+                        </div>
+                        <div class="hover-hlt" id="finish_hover">
+                            <button class="fin hover"><img src="img/ppm/wantag.png"></button>
+                        </div>
+                        <div class="hover-hlt" id="delay_hover">
+                            <button class="dela hover"><img src="img/ppm/chitag.png"></button>
+                        </div>
+                        <div class="hover-hlt" id="ongoing_hover">
+                            <button class="ongo hover"><img src="img/ppm/jingtag.png"></button>
+                            <img src="img/ppm/bell.png" alt="提醒"  class="hover remindClick">
+                        </div>
+                        <div class="hlb hover">
+                            <span class="hover">条线：强电</span>
+                            <span class="hover">系统：<i>综合供电</i></span>
+                            <span class="hover">保养类别：<i>强电机房电箱</i></span>
+                            <span class="hover">服务区域：<i>1H-4H1H-4H1H-4H1H-4H1H-4H</i></span>
+                            <span class="hover">任务期间：7/15-7/22</span>
+                            <span class="hover">完成时间：--</span>
+                            <span class="hover" style="height:30px;text-overflow: clip;white-space: normal;">完成情况：对该强电机房内的设备进行了清洁维护，任务时间安排上较宽裕。</span>
+                        </div>
+                        <div class="hover-hlt" id="click-finish">
+                            <button class="ongo hover clickFinish"><img src="img/ppm/cfini.png" style="cursor: pointer;margin-right: 5px"></button>
+                            <button class="ongo hover relationWork" ng-click="relationWork()"><img src="img/ppm/relation-work.png" style="cursor: pointer"></button>
+                        </div>
+                    </div>
+                    <div class="hover-right">
+                        <span class="hover">提醒记录</span>
+                        <i class="on hover">2016/06/28</i>
+                    </div>
+                </div>
+                <div id="timeLeft" ng-click="dataTime.lra('left')"></div>
+                <div id="timeRight" ng-click="dataTime.lra('right')"></div>
+            </div>
+            <div class="scrollBox"><div id="scroll"></div></div>
+        </div>
+    </div>
+</div>

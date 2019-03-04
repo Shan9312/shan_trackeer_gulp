@@ -1,0 +1,46 @@
+<div class="ifm" ng-controller="people">
+    <div class="header">
+        <span class="title"><i class="default">人员</i></span>
+        <div class="search"><select class="select-one">
+                <option value="nameLike">姓名</option>
+                <option value="loginNameLike">工号</option>
+            </select><input type="text"/><i></i>
+        </div>
+        <button class="addFun" onclick="People.add()">添加人员</button>
+    </div>
+    <table class="table text-center people">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>工号</th>
+                <th>
+                    <div class="dropdown role">
+                        <button class="dropdown-toggle" type="button" id="people-position" data-toggle="dropdown" data-status="">职位<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="people-position"></ul>
+                    </div>
+                </th>
+               <!-- <th>
+                    <div class="dropdown proROle">
+                        <button class="dropdown-toggle" type="button" id="peoplePro" data-toggle="dropdown">所属项目<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="peoplePro" ></ul>
+                    </div>
+                </th>-->
+                <th>条线
+                    <!--<div class="dropdown line">
+                        <button class="dropdown-toggle" type="button" id="peopleLine" data-toggle="dropdown" data-status="">条线<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="peopleLine" ></ul>
+                    </div>-->
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--<tr>
+                <td onclick="openHtml('tpl/people_detail.html','people')">徐文章</td>
+                <td>201001</td>
+                <td>项目经理</td>
+                <td>ajsdhk</td>
+            </tr>-->
+        </tbody>
+    </table>
+    <div class="tcdPageCode" id="orderPage"></div>
+</div>

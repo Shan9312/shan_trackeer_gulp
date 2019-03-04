@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tracker</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <!--<scrip src="js/index.js"></script>-->
+</head>
+<body>
+<section class="bg-main pt-30 pb-100">
+    <div class="container logo ">
+        <img src="img/login.png">
+        <a href="javascript:" class="f-18 font-white fr login-a"></a>
+    </div>
+    <div class="container main">
+        <img src="img/mainfont.png" class="mt-200"/>
+        <button class="btn-down font-white f-18 mt-88"><i class="icon-download-alt mr-10"></i>Download Now</button>
+        <div class="login">
+            <label class="f-16">用户名</label>
+            <input type="text" placeholder="请输入账号" class="f-18 font-center" id="login-username">
+            <label class="f-16 mt-10">密码</label>
+            <input type="password" placeholder="请输入密码" class="f-18 font-center" id="login-password">
+            <label class="f-16 mb-30 mt-10"><input type="checkbox" class="mr-10" id="remc">记住密码</label>
+            <button class="f-18 btn-login font-white"  id="login-submit"  onclick="login.log()">确 认</button>
+            <span class="ve">v1.3.0</span>
+        </div>
+    </div>
+    <div></div>
+</section>
+<section class="bg-white pt-100 pb-100 font-center">
+    <div class="container">
+        <span class="title f-40">TRACKER物业管理软件</span>
+        <span class="title-small f-28">property management software</span>
+        <p class="plr-92 mt-30 line-26">为物业公司量身定制,针对不通业务部门、不同岗位、不同职责，TRACKER软件提供相应的信息化子系统作为开展日常工作的工具，搭建全面应用企业信息化平台，不同人群各取所需，充分发挥信息化工作的效能。</p>
+        <button class="btn-intro mt-40 font-main-1 f-18" onclick="good()">TRACKER <b>软件优势介绍</b></button>
+    </div>
+</section>
+<section class="bg-gay pt-100 pb-100">
+    <div class="container clear font-center">
+        <div class="col-3 pr-74">
+            <img src="img/ad_1.png" alt="任务管理">
+            <div class="f-26 font-main-3 mb-20 mt-30">任务管理</div>
+            <p class="font-main-2 f-14 line-28 ">包括巡视、工单、保养等任务的管理，既可实现将任务分配至某个具体人员，又能对任务的进行情况监控，任务结束以后还会留下相应的记录，以便日后查看。</p>
+        </div>
+        <div class="col-3 plr-37">
+            <img src="img/ad_2.png" alt="人员管理">
+            <div class="f-26 font-main-3 mb-20 mt-30">人员管理</div>
+            <p class="font-main-2 f-14 line-28 ">人员的工作安排，及细节沟通都可以在软件中交流，可以直观的了解每一个人的工作进展。又能通过记录追溯到，人员的工作效率和人员的工作体量。</p>
+        </div>
+        <div class="col-3 pl-74">
+            <img src="img/ad_3.png" alt="数据流管理">
+            <div class="f-26 font-main-3 mb-20 mt-30">数据流管理</div>
+            <p class="font-main-2 f-14 line-28 ">在记录了每一次任务细节的同时，基于不断积累的海量数据，我们制订了详细的统计图表，使得每周、每月、每年的项目状况都能直观的反映在项目图表中，方便评估。</p>
+        </div>
+    </div>
+</section>
+<section class="bg-white pt-100 pb-100">
+    <div class="container clear">
+        <ul class="fl product">
+            <li>
+                <span class="title f-26">工作效率提升</span>
+                <span class="title-small f-18 mb-30">Efficiency improvement</span>
+                <img src="img/pro-1.png" class="fl ml-30 mr-30">
+                <p class="fl f-16 line-30 font-main-2">将多种物业任务集合在了一起，使得多重任务同时进行，任务细节实时传达，精确地对人员进行任务管控，分配监督，节省了大量的人力物力。</p>
+            </li>
+            <li class="mt-88">
+                <span class="title f-26">信息传达方便</span>
+                <span class="title-small f-18 mb-30">Communication convenience</span>
+                <img src="img/pro-2.png" class="fl ml-30 mr-30">
+                <p class="fl f-16 line-30 font-main-2">可以通过文字和拍照等多种方式传达工作细节，工作人员可提前查看并准备，减少过程消耗提高效率。工作进度一目了然，随时感受物管人员工作热忱。</p>
+            </li>
+        </ul>
+        <img src="img/produce.png" class="fr"/></div>
+</section>
+<section class="bg-gay pt-100 pb-100">
+    <div class="container">
+        <ul class="fr product">
+            <li>
+                <span class="title f-26 font-right">数据易于储存</span>
+                <span class="title-small f-18 mb-30 font-right">Easy to store data</span>
+                <img src="img/pro-1.png" class="fl ml-30 mr-30">
+                <p class="fl f-16 line-30 font-main-2">抛弃传统纸质表单，数据统一保存在服务器。我们进行了细致的分类，使得历史纪录非常便于查看。这对于体量非常大的项目尤其重要。</p>
+            </li>
+            <li class="mt-88">
+                <span class="title f-26 font-right">为数据提供安全保障</span>
+                <span class="title-small f-18 mb-30 font-right">Provide security for data</span>
+                <img src="img/pro-2.png" class="fl ml-30 mr-30">
+                <p class="fl f-16 line-30 font-main-2">我们郑重承诺：您的数据是保密且安全的。首先你可以自己来控制谁能查看到哪个权限的工作数据。此外，所有数据都在加密过之后被备份于 tracker 的多个服务器上，以确保不会丢失。</p>
+            </li>
+        </ul>
+        <img src="img/produceweb.png" class="fl"/>
+    </div>
+</section>
+<section class="bg-white pt-30">
+    <div class="container any pt-150 pb-220">
+        <span class="title f-26 line-40">随时随地</span>
+        <span class="title f-26 line-40">找到你的工作状态</span>
+        <span class="title-small f-18">Find your job anytime</span>
+        <div class="f-16 line-30 font-main-2 mt-70" style="width: 466px">上海介谷科技有限公司，我们致力于将互联网概念与信息技术融入物业管理中，将传统物业管理打造成数字化物业管理，为每一位客户节省时间与金钱，并最终形成智能城市。为遍布全国的客户提供产品和服务。</div>
+    </div>
+</section>
+<!--<section class="bg-gay pt-100 pb-100 font-center">
+    <div class="container">
+        <span class="title f-40">关于我们</span>
+        <span class="title-small f-28">About Us</span>
+        <p class="plr-92 mt-30 line-26">上海介谷科技有限公司，我们致力于将互联网概念与信息技术融入物业管理中，将传统物业管理打造成数字化物业管理，为每一位客户节省时间与金钱，并最终形成智能城市。为遍布全国的客户提供产品和服务。</p>
+    </div>
+</section>-->
+<div class="codebox">
+    <div class="codebg"></div>
+    <div class="code font-center font-white">
+        <i class="icon-remove f-30"></i>
+        <img src="img/andio.png"/>
+        <span class="f-20 mt-10 mb-10">最新版本号 <em class="ve">v1.2.3</em></span>
+        <!--<span class="f-14">更新内容</span>
+        <span class="f-14">1.TEXTTEXTTEXTTEXTTEXT</span>
+        <span class="f-14">2.TEXTTEXTTEXTTEXTTEXT</span>
+        <span class="f-14">3.TEXTTEXTTEXTTEXTTEXT</span>-->
+    </div>
+</div>
+<footer class="bg-footer">
+    <div class="container font-white clear line-70">
+        <div class="fl">邮箱：tracker@ifourthwall.com&nbsp;&nbsp;∣&nbsp;&nbsp;地址：上海市杨浦区大连路970号9号楼1606室&nbsp;&nbsp;∣&nbsp;&nbsp;联系方式：021-65671721</div>
+        <div class="fr">©2017 tracker.介谷科技</div>
+    </div>
+</footer>
+</body>
+<script>
+    $(document).keydown(function(e){
+        if(e.keyCode==13){
+            login.log()
+        }
+    });
+    login.rem();
+    $('.ve').html('v'+_v);
+</script>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/csss.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/jquery.lineProgressbar.min.css">
+</head>
+<body>
+<div class="ifm admin">
+    <div class="title"  >
+        <button class="back_a" onclick="delHtml('admin_fault')"></button>
+        <div class="mod" style="height: 100px">
+            <span >工单按时完成率</span>
+            <div  id="round-ss" style="width: 250px;position: relative;top:-5px; margin:5px;padding-top:3px;"></div>
+            <div class="data con" style="position: relative;top: -34px;z-index: 10;">
+                <i>平均</i>
+            </div>
+        </div>
+        <div class="select">
+            <label>按周</label>
+            <select>
+                <option value="week">按周</option>
+                <option value="month">按月</option>
+                <option value="year">按年</option>
+            </select>
+        </div>
+    </div>
+    <div class="chart" id="patrol" ></div>
+    <div class="data_select" style="top:106px!important;">
+        从
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+        到
+        <div class="select">
+            <label>不限制</label>
+            <select>
+                <option value="">不限制</option>
+            </select>
+        </div>
+    </div>
+    <div class="pro_table">
+     <div style="border-bottom: 1px solid #ddd; height:35px;padding-top:5px;">
+            <p class="tit" style="float:left;">
+                本<span class="s-times"></span>超时工单
+                <span id="s-cout"></span>张 占
+                <span id="s-num">4%</span>
+            </p>
+            <div style="float:right;" class="ss-right dropdown " attr-id="ss-dropdown">
+                <button class="dropdown-toggle addBtn"
+                        type="button"
+                        id="ss-drop"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="true">
+                    <span attr-id="ss-time-btn" data-time="EXPIRE1">按超时时长最短排序</span>
+                    <span class="caret"></span>
+                </button>
+                <ol class="dropdown-menu" aria-labelledby="ss-drop" data-bgcolor="s-ol">
+                    <li data-time="EXPIRE1" class="s-li">按超时时长最短排序</li>
+                    <li data-time="EXPIRE2">按超时时长最长排序</li>
+                    <li data-time="UNAME1">按维修人名字正序排</li>
+                    <li data-time="UNAME2">按维修人名字倒序排</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <table class="table text-center pro_table moon" style="width: 100%;margin-bottom: 0">
+        <thead>
+        <tr>
+            <th>单号</th>
+            <th>维修人</th>
+            <th>维修对象</th>
+            <th>超时时间</th>
+        </tr>
+        </thead>
+        <tbody id="tbodys" style="height: 128px;">
+        <!--<tr>-->
+            <!--<td>1028412</td>-->
+            <!--<td>111</td>-->
+            <!--<td>111</td>-->
+            <!--<td>111</td>-->
+        <!--</tr>-->
+        </tbody>
+    </table>
+    </div>
+   </div>
+</body>
+<script src="../js/jquery.lineProgressbar.js"></script>
+<script>
+    int();
+    fault_device.int();
+
+    $('[data-bgcolor="s-ol"]>li').mouseenter(
+        function(){
+            $(this).addClass('s-li')
+        });
+    $('[data-bgcolor="s-ol"]>li').mouseleave(
+        function(){
+            $(this).removeClass('s-li');
+    });
+
+</script>
+</html>
+
